@@ -20,29 +20,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
-            --primary: #FF6B35;
-            --primary-dark: #E55A2B;
-            --secondary: #1A1A2E;
-            --accent: #FFD700;
-            --background: #0F0F1A;
-            --surface: #1E1E32;
-            --surface-light: #2A2A45;
-            --text-primary: #FFFFFF;
-            --text-secondary: #B0B0C0;
-            --gradient: linear-gradient(135deg, #FF6B35 0%, #FFD700 100%);
+            --primary: #E07A3F;
+            --primary-dark: #B85B2A;
+            --secondary: #182033;
+            --accent: #F2C14E;
+            --background: #0E1628;
+            --surface: #162238;
+            --surface-light: #1F2D46;
+            --text-primary: #F5F7FC;
+            --text-secondary: #B7C2D9;
+            --gradient: linear-gradient(135deg, #E07A3F 0%, #F2C14E 100%);
         }
 
         [data-theme="light"] {
-            --primary: #800000;
-            --primary-dark: #600000;
-            --secondary: #F5F5F0;
-            --accent: #800000;
-            --background: #FAF9F6;
+            --primary: #A54E21;
+            --primary-dark: #7E3818;
+            --secondary: #F4F6FB;
+            --accent: #D9A441;
+            --background: #F8FAFE;
             --surface: #FFFFFF;
-            --surface-light: #F0EDE8;
-            --text-primary: #1A1A1A;
-            --text-secondary: #5A5A5A;
-            --gradient: linear-gradient(135deg, #800000 0%, #A52A2A 100%);
+            --surface-light: #EDF2F9;
+            --text-primary: #1A2235;
+            --text-secondary: #5C6882;
+            --gradient: linear-gradient(135deg, #A54E21 0%, #D9A441 100%);
         }
 
         [data-theme="light"] .event-location {
@@ -214,10 +214,7 @@
             align-items: center;
             justify-content: center;
             position: relative;
-            background: linear-gradient(135deg, var(--surface) 0%, var(--surface-light) 100%),
-                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23800000" stroke-width="0.5" opacity="0.1"/></svg>');
-            background-size: cover;
-            background-position: center;
+            background: var(--background);
             overflow: hidden;
         }
 
@@ -228,13 +225,28 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 30% 70%, rgba(128, 0, 0, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 70% 30%, rgba(128, 0, 0, 0.1) 0%, transparent 50%);
+            background: url('/images/DSC03958.JPG') center/cover no-repeat;
+            filter: blur(8px);
+            transform: scale(1.06);
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(15, 15, 26, 0.68) 0%, rgba(30, 30, 50, 0.62) 100%),
+                radial-gradient(circle at 30% 70%, rgba(128, 0, 0, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(128, 0, 0, 0.15) 0%, transparent 50%);
+            z-index: 1;
         }
 
         .hero-content {
             text-align: center;
-            z-index: 1;
+            z-index: 2;
             padding: 0 5%;
             animation: fadeInUp 1s ease;
         }
@@ -256,17 +268,13 @@
             font-size: clamp(2.5rem, 6vw, 4.5rem);
             font-weight: 700;
             margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary) 50%, var(--primary-dark) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
+            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75), 0 1px 2px rgba(0, 0, 0, 0.9);
         }
 
         [data-theme="light"] .hero h1 {
-            background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #ffffff;
+            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75), 0 1px 2px rgba(0, 0, 0, 0.9);
         }
 
         .hero h1 .marathi {

@@ -7,7 +7,7 @@ layout: base.njk
         {% if image %}
         background: url('{{ image }}') center/cover no-repeat;
         {% else %}
-        background: url('/images/DSC03958.JPG') center/cover no-repeat;
+        background: url('/images/events/diwali-2024/DSC03958.JPG') center/cover no-repeat;
         {% endif %}
     }
 </style>
@@ -39,4 +39,23 @@ layout: base.njk
     <div class="prose">
         {{ content | safe }}
     </div>
+
+    {% if sponsors and sponsors.length > 0 %}
+    <div class="event-sponsors">
+        <h3>Our Generous Sponsors</h3>
+        <div class="sponsors-grid">
+            {% for sponsor in sponsors %}
+            <div class="sponsor-item">
+                {% if sponsor.link %}
+                <a href="{{ sponsor.link }}" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="sponsor-logo">
+                </a>
+                {% else %}
+                <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="sponsor-logo">
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
 </div>

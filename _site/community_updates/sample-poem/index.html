@@ -51,60 +51,177 @@
     <main>
         <link rel="stylesheet" href="/css/event.css">
 <style>
-    .event-hero::before {
+    .post-hero {
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: var(--background);
+        overflow: hidden;
+        padding-top: 80px;
+    }
+
+    .post-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         
-        background: url('/images/global/background.jpeg') center/cover no-repeat;
+        background: url('/images/community_updates/sample-poem/DSC03973.JPG') center/cover no-repeat;
         
+        filter: blur(4px) brightness(0.6);
+        transform: scale(1.05);
+        z-index: 0;
+    }
+
+    .post-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(14, 22, 40, 0.7) 0%, var(--background) 100%);
+        z-index: 1;
+    }
+
+    [data-theme="light"] .post-hero::after {
+        background: linear-gradient(to bottom, rgba(30, 30, 30, 0.5) 0%, var(--background) 100%);
+    }
+
+    .post-header {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 900px;
+        padding: 0 5%;
+        margin-top: 2rem;
+        animation: fadeInUp 1s ease;
+    }
+
+    .post-category {
+        display: inline-block;
+        background: var(--accent);
+        color: var(--secondary);
+        padding: 0.4rem 1.2rem;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .post-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.8);
+    }
+
+    [data-theme="light"] .post-title {
+        color: #ffffff;
+    }
+
+    .post-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        color: #e2e8f0;
+        font-size: 1.1rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .post-author {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-weight: 600;
+    }
+
+    .post-author i {
+        color: var(--primary);
+        font-size: 1.2rem;
+    }
+
+    .post-meta-item i {
+        color: var(--accent);
+        margin-right: 0.5rem;
+    }
+
+    .post-body {
+        max-width: 800px;
+        margin: -4rem auto 4rem;
+        background: var(--surface);
+        padding: 4rem;
+        border-radius: 20px;
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        animation: fadeInUp 1.2s ease;
+    }
+
+    @media (max-width: 768px) {
+        .post-body {
+            margin: -2rem 1rem 3rem;
+            padding: 2.5rem 1.5rem;
+        }
+        .post-meta {
+            flex-direction: column;
+            gap: 1rem;
+        }
     }
 </style>
 
-<section class="event-hero">
-    <div class="event-header">
+<section class="post-hero">
+    <div class="post-header">
         
-        <span class="event-category">Festival</span>
+        <span class="post-category">Poetry</span>
         
-        <h1 class="event-title">Gudi Padwa 2025 - New Year Celebrations</h1>
-        <div class="event-meta">
-            <span><i class="far fa-calendar-alt"></i> March 2025</span>
+        <h1 class="post-title">The Colors of Krakow</h1>
+        <div class="post-meta">
             
+            <div class="post-author">
+                <i class="fas fa-user-circle"></i>
+                By Aarushi (Age 12)
+            </div>
+            
+            <div class="post-meta-item">
+                <i class="far fa-calendar-alt"></i> March 2024
+            </div>
         </div>
     </div>
 </section>
 
-<div class="event-body">
-    <a href="/#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to Events</a>
+<div class="post-body">
+    <a href="/community_updates/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Community Updates</a>
     
     
-    <div class="prose" style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2.5rem; color: var(--text-primary); border-left: 4px solid var(--primary); padding-left: 1.5rem; background: var(--secondary); padding: 1.5rem; border-radius: 0 12px 12px 0;">
-        Welcoming the Marathi new year with traditional Gudi Padwa celebrations featuring authentic Marathi cuisine and cultural performances.
+    <div class="prose" style="font-size: 1.3rem; font-style: italic; line-height: 1.6; margin-bottom: 3rem; color: var(--text-primary); text-align: center; border-bottom: 1px solid var(--surface-light); padding-bottom: 2rem;">
+        "A short poem about how Krakow&#39;s streets blend with the vibrant spirit of our culture."
     </div>
     
 
     <div class="prose">
-        <h1>Gudi Padwa 2026 - Marathi New Year Celebrations</h1>
-<p>Maharashtra Mandal Krakow celebrating Gudi Padwa, the Marathi New Year, with traditional zeal and enthusiasm. The festival marks the beginning of the spring harvest season and will celebrate with special foods, decorations, and rituals.</p>
-<h2>Celebration Highlights</h2>
-<ul>
-<li><strong>Gudi Installation</strong>: A traditional Gudi (swayambhu) was hoisted at the venue</li>
-<li><strong>Traditional Puran Poli</strong>: Community members prepared and shared authentic Marathi dishes</li>
-<li><strong>Cultural Program</strong>: Traditional Marathi songs and dances</li>
-<li><strong>Rangoli Competition</strong>: Beautiful rangoli designs depicting the festival</li>
-</ul>
-<h2>Traditional Significance</h2>
-<p>Gudi Padwa holds special significance in Marathi culture. The Gudi symbolizes victory and is believed to bring good luck. The festival also marks the onset of spring and the new harvest season.</p>
-<h2>Photo Gallery</h2>
-<p><img src="/images/global/background.jpeg" alt="Gudi Padwa Celebration">
-<em>The decorated Gudi</em></p>
-<p><img src="/images/global/logo.png" alt="Traditional Food">
-<em>Puran Poli and other Marathi delicacies</em></p>
-<h2>Looking Forward</h2>
-<p>We look forward to celebrating many more Gudi Padwas with our community. Thank you to all who participated and made the event a success!</p>
-<hr>
-<p><em>Gudi Padwa Hardik Shubhechha!</em></p>
+        <h1>The Colors of Krakow</h1>
+<p>The old town square is gray and bright,<br>
+Bathing in the morning light.<br>
+But when we gather, dance, and sing,<br>
+We give the ancient cobbles wings.</p>
+<p>Our vibrant clothes, a joyous hue,<br>
+A splash of saffron, green, and blue.<br>
+Though miles away from where we start,<br>
+We keep our homeland in our heart.</p>
+<p><em>Written with love by Aarushi.</em></p>
 
     </div>
-
-    
 </div>
 
     </main>

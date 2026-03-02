@@ -6,7 +6,8 @@
         position: relative;
         background: var(--background);
         overflow: hidden;
-        padding-top: 80px; /* Space for navbar */
+        padding-top: 80px;
+        /* Space for navbar */
     }
 
     .event-hero::before {
@@ -67,7 +68,7 @@
         line-height: 1.2;
         text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75), 0 1px 2px rgba(0, 0, 0, 0.9);
     }
-    
+
     [data-theme="light"] .event-title {
         color: #ffffff;
     }
@@ -82,7 +83,7 @@
         margin-top: 1.5rem;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     }
-    
+
     .event-meta i {
         color: var(--accent);
         margin-right: 0.5rem;
@@ -125,7 +126,9 @@
         font-size: 1.1rem;
     }
 
-    .prose h1, .prose h2, .prose h3 {
+    .prose h1,
+    .prose h2,
+    .prose h3 {
         font-family: 'Playfair Display', serif;
         color: var(--text-primary);
         margin-top: 3rem;
@@ -134,18 +137,20 @@
         font-weight: 600;
     }
 
-    .prose h1 { 
-        font-size: 2.5rem; 
+    .prose h1 {
+        font-size: 2.5rem;
         display: none;
     }
-    .prose h2 { 
-        font-size: 2rem; 
-        border-bottom: 2px solid var(--surface-light); 
-        padding-bottom: 0.8rem; 
+
+    .prose h2 {
+        font-size: 2rem;
+        border-bottom: 2px solid var(--surface-light);
+        padding-bottom: 0.8rem;
     }
-    .prose h3 { 
-        font-size: 1.5rem; 
-        color: var(--primary); 
+
+    .prose h3 {
+        font-size: 1.5rem;
+        color: var(--primary);
     }
 
     .prose p {
@@ -153,7 +158,8 @@
         color: var(--text-secondary);
     }
 
-    .prose ul, .prose ol {
+    .prose ul,
+    .prose ol {
         margin-bottom: 1.5rem;
         padding-left: 1.5rem;
         color: var(--text-secondary);
@@ -162,7 +168,7 @@
     .prose li {
         margin-bottom: 0.5rem;
     }
-    
+
     .prose li::marker {
         color: var(--primary);
     }
@@ -174,7 +180,7 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
         transition: transform 0.3s ease;
     }
-    
+
     .prose img:hover {
         transform: scale(1.02);
     }
@@ -210,11 +216,47 @@
         margin: 3rem 0;
     }
 
+    .event-sponsors {
+        margin-top: 4rem;
+        padding-top: 3rem;
+        border-top: 1px solid var(--surface-light);
+        text-align: center;
+    }
+
+    .event-sponsors h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: var(--text-primary);
+        margin-bottom: 2rem;
+    }
+
+    .sponsors-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .sponsor-logo {
+        max-width: 180px;
+        max-height: 80px;
+        object-fit: contain;
+        filter: grayscale(100%) opacity(0.7);
+        transition: all 0.3s ease;
+    }
+
+    .sponsor-logo:hover {
+        filter: grayscale(0%) opacity(1);
+        transform: scale(1.05);
+    }
+
     @media (max-width: 768px) {
         .event-body {
             margin: -2rem 1rem 3rem;
             padding: 2.5rem 1.5rem;
         }
+
         .event-meta {
             flex-direction: column;
             gap: 0.8rem;

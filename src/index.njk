@@ -116,35 +116,35 @@ layout: base.njk
         <div id="photos" class="gallery-content active">
             <div class="gallery-grid">
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/DSC03958.JPG" alt="MMK Event Photo 1">
+                    <img src="images/events/diwali-2024/DSC03958.JPG" alt="MMK Event Photo 1">
                     <i class="fas fa-expand"></i>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/DSC03973.JPG" alt="MMK Event Photo 2">
+                    <img src="images/community_updates/sample-poem/DSC03973.JPG" alt="MMK Event Photo 2">
                     <i class="fas fa-expand"></i>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/DSC05518.JPG" alt="MMK Event Photo 3">
+                    <img src="images/events/ganeshotsav-2024/DSC05518.JPG" alt="MMK Event Photo 3">
                     <i class="fas fa-expand"></i>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/DSC05522.JPG" alt="MMK Event Photo 4">
+                    <img src="images/events/ganeshotsav-2024/DSC05522.JPG" alt="MMK Event Photo 4">
                     <i class="fas fa-expand"></i>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/DSC05555.JPG" alt="MMK Event Photo 5">
+                    <img src="images/events/ganeshotsav-2024/DSC05555.JPG" alt="MMK Event Photo 5">
                     <i class="fas fa-expand"></i>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/DSC06824 (1).jpg" alt="MMK Event Photo 6">
+                    <img src="images/events/gudi-padwa-2026/DSC06824 (1).jpg" alt="MMK Event Photo 6">
                     <i class="fas fa-expand"></i>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/DSC06839 (1).jpg" alt="MMK Event Photo 7">
+                    <img src="images/events/gudi-padwa-2026/DSC06839 (1).jpg" alt="MMK Event Photo 7">
                     <i class="fas fa-expand"></i>
                 </div>
                 <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/DSC07645.jpg" alt="MMK Event Photo 8">
+                    <img src="images/events/gudi-padwa-2026/DSC07645.jpg" alt="MMK Event Photo 8">
                     <i class="fas fa-expand"></i>
                 </div>
             </div>
@@ -170,17 +170,20 @@ layout: base.njk
     <!-- Blog Section -->
     <section id="blog" class="blog">
         <div class="section-header">
-            <h2>Latest <span>Updates</span></h2>
-            <p>Stay informed about our latest events, celebrations, and community news.</p>
+            <h2>Community <span>Updates</span></h2>
+            <p>Stay connected with poems, stories, and creativity from the MMK family.</p>
         </div>
         <div class="blog-grid">
             
-        {% for post in collections.event | reverse %}
+        {% for post in collections.post | reverse %}
           {% if loop.index <= 3 %}
             <article class="blog-card fade-in">
                 <img src="{{ post.data.image | replace('../', '') }}" alt="{{ post.data.title }}" class="blog-image">
                 <div class="blog-content">
                     <span class="blog-date">{{ post.data.date | formatDate }}</span>
+                    {% if post.data.author %}
+                    <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; display: block;"><i class="fas fa-user-circle" style="color: var(--primary);"></i> {{ post.data.author }}</span>
+                    {% endif %}
                     <h3>{{ post.data.title }}</h3>
                     <p>{{ post.data.excerpt }}</p>
                     <a href="{{ post.url }}" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
@@ -191,7 +194,7 @@ layout: base.njk
 
         </div>
         <div class="view-all-events">
-            <a href="/events/" class="btn btn-secondary">View All Posts</a>
+            <a href="/community_updates/" class="btn btn-secondary">View All Posts</a>
         </div>
     </section>
 

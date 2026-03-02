@@ -4,8 +4,13 @@ layout: event.njk
 title: "Diwali - Festival of Lights 2024"
 date: "2024-11-01"
 category: "Festival"
-image: "/images/background.jpeg"
-excerpt: "Celebrating the festival of lights with diya decorations, rangoli competitions, and a wonderful evening of music and dance."
+image: "/images/global/background.jpeg"
+excerpt: "Join us for the Festival of Lights, featuring cultural performances, delicious food, and fireworks."
+sponsors:
+  - name: "Sponsor 1"
+    logo: "/images/sponsors/sponsor1.svg"
+  - name: "Sponsor 2"
+    logo: "/images/sponsors/sponsor2.svg"
 ---
 
 # Diwali - Festival of Lights 2024
@@ -16,8 +21,11 @@ The Maharashtra Mandal Krakow joined hands with the Indian community in Krakow t
 
 - **Diya Lighting Ceremony**: Hundreds of diyas illuminated the venue, creating a magical atmosphere
 - **Rangoli Competition**: Beautiful rangoli designs by community members
-- **Cultural Performances**: Classical and folk dances, Bollywood music, and poetry recitation
-- **Food Festival**: Authentic Indian sweets and snacks
+- **Cultural Program:** Featuring dances, singing, and a special drama by our youth.
+- **Diwali Dinner:** A sumptuous feast of Maharashtrian delicacies.
+- **Fireworks:** A safe and beautiful display to light up the night sky.
+
+Please make sure to book your tickets in advance. We look forward to celebrating with you!
 
 ## Community Spirit
 
@@ -25,10 +33,10 @@ This Diwali celebration was special as it brought together not just the Marathi 
 
 ## Photo Gallery
 
-![Diwali Celebration](/images/background.jpeg)
+![Diwali Celebration](/images/global/background.jpeg)
 *Diya decorations*
 
-![Rangoli Competition](/images/maharashtra_map.png)
+![Rangoli Competition](/images/global/maharashtra_map.png)
 *Beautiful rangoli designs*
 
 ## Thank You

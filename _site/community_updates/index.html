@@ -51,60 +51,251 @@
     <main>
         <link rel="stylesheet" href="/css/event.css">
 <style>
-    .event-hero::before {
-        
-        background: url('/images/global/background.jpeg') center/cover no-repeat;
-        
+    .blog-hero {
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: var(--background);
+        overflow: hidden;
+        padding-top: 80px; 
+    }
+
+    .blog-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('/images/events/DSC05518.JPG') center/cover no-repeat;
+        filter: blur(8px) brightness(0.6);
+        transform: scale(1.05);
+        z-index: 0;
+    }
+
+    .blog-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(14, 22, 40, 0.7) 0%, var(--background) 100%);
+        z-index: 1;
+    }
+
+    [data-theme="light"] .blog-hero::after {
+        background: linear-gradient(to bottom, rgba(30, 30, 30, 0.5) 0%, var(--background) 100%);
+    }
+
+    .blog-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 800px;
+        padding: 0 5%;
+        animation: fadeInUp 1s ease;
+    }
+
+    .blog-hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        color: #ffffff;
+        margin-bottom: 1rem;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75);
+    }
+    
+    .blog-hero h1 span {
+        color: var(--accent);
+    }
+
+    .blog-hero p {
+        font-size: 1.1rem;
+        color: #e2e8f0;
+    }
+    
+    .blog-container {
+        max-width: 1200px;
+        margin: -4rem auto 4rem;
+        position: relative;
+        z-index: 10;
+        padding: 0 5%;
+    }
+
+    .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 2rem;
+    }
+
+    .post-card {
+        background: var(--surface);
+        border-radius: 20px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border: 1px solid var(--surface-light);
+    }
+
+    .post-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--primary);
+        box-shadow: 0 15px 40px rgba(224, 122, 63, 0.15);
+    }
+
+    .post-image-wrapper {
+        position: relative;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .post-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+    .post-card:hover .post-image {
+        transform: scale(1.05);
+    }
+
+    .post-category {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        background: var(--accent);
+        color: var(--secondary);
+        padding: 0.3rem 1rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .post-content {
+        padding: 2rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .post-meta-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid var(--surface-light);
+        padding-bottom: 1rem;
+    }
+
+    .post-author {
+        font-weight: 600;
+        color: var(--text-primary);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .post-author i {
+        color: var(--primary);
+    }
+
+    .post-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.5rem;
+        color: var(--text-primary);
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .post-excerpt {
+        color: var(--text-secondary);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+    }
+
+    .post-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        transition: gap 0.3s ease;
+        margin-top: auto;
+    }
+
+    .post-link:hover {
+        gap: 0.8rem;
     }
 </style>
 
-<section class="event-hero">
-    <div class="event-header">
-        
-        <span class="event-category">Festival</span>
-        
-        <h1 class="event-title">Gudi Padwa 2025 - New Year Celebrations</h1>
-        <div class="event-meta">
-            <span><i class="far fa-calendar-alt"></i> March 2025</span>
-            
-        </div>
+<section class="blog-hero">
+    <div class="blog-hero-content">
+        <h1>Community <span>Stories</span></h1>
+        <p>Poems, articles, art, and updates from the bright minds in our Maharashtra Mandal Krakow community.</p>
     </div>
 </section>
 
-<div class="event-body">
-    <a href="/#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to Events</a>
-    
-    
-    <div class="prose" style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2.5rem; color: var(--text-primary); border-left: 4px solid var(--primary); padding-left: 1.5rem; background: var(--secondary); padding: 1.5rem; border-radius: 0 12px 12px 0;">
-        Welcoming the Marathi new year with traditional Gudi Padwa celebrations featuring authentic Marathi cuisine and cultural performances.
+<div class="blog-container">
+    <div class="posts-grid">
+        
+        <article class="post-card fade-in">
+            
+            <div class="post-image-wrapper">
+                <img src="/images/community_updates/DSC03973.JPG" alt="The Colors of Krakow" class="post-image">
+                
+                <span class="post-category">Poetry</span>
+                
+            </div>
+            
+            <div class="post-content">
+                <div class="post-meta-top">
+                    
+                    <span class="post-author"><i class="fas fa-user-circle"></i> Aarushi (Age 12)</span>
+                    
+                    <span class="post-date">March 2024</span>
+                </div>
+                <h3 class="post-title">The Colors of Krakow</h3>
+                <p class="post-excerpt">A short poem about how Krakow&#39;s streets blend with the vibrant spirit of our culture.</p>
+                <a href="/community_updates/sample-poem/" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+        
+        <article class="post-card fade-in">
+            
+            <div class="post-image-wrapper">
+                <img src="/images/DSC03973.JPG" alt="The Colors of Krakow" class="post-image">
+                
+                <span class="post-category">Poetry</span>
+                
+            </div>
+            
+            <div class="post-content">
+                <div class="post-meta-top">
+                    
+                    <span class="post-author"><i class="fas fa-user-circle"></i> Aarushi (Age 12)</span>
+                    
+                    <span class="post-date">March 2024</span>
+                </div>
+                <h3 class="post-title">The Colors of Krakow</h3>
+                <p class="post-excerpt">A short poem about how Krakow&#39;s streets blend with the vibrant spirit of our culture.</p>
+                <a href="/blog/sample-poem/" class="post-link">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+        
     </div>
-    
-
-    <div class="prose">
-        <h1>Gudi Padwa 2026 - Marathi New Year Celebrations</h1>
-<p>Maharashtra Mandal Krakow celebrating Gudi Padwa, the Marathi New Year, with traditional zeal and enthusiasm. The festival marks the beginning of the spring harvest season and will celebrate with special foods, decorations, and rituals.</p>
-<h2>Celebration Highlights</h2>
-<ul>
-<li><strong>Gudi Installation</strong>: A traditional Gudi (swayambhu) was hoisted at the venue</li>
-<li><strong>Traditional Puran Poli</strong>: Community members prepared and shared authentic Marathi dishes</li>
-<li><strong>Cultural Program</strong>: Traditional Marathi songs and dances</li>
-<li><strong>Rangoli Competition</strong>: Beautiful rangoli designs depicting the festival</li>
-</ul>
-<h2>Traditional Significance</h2>
-<p>Gudi Padwa holds special significance in Marathi culture. The Gudi symbolizes victory and is believed to bring good luck. The festival also marks the onset of spring and the new harvest season.</p>
-<h2>Photo Gallery</h2>
-<p><img src="/images/global/background.jpeg" alt="Gudi Padwa Celebration">
-<em>The decorated Gudi</em></p>
-<p><img src="/images/global/logo.png" alt="Traditional Food">
-<em>Puran Poli and other Marathi delicacies</em></p>
-<h2>Looking Forward</h2>
-<p>We look forward to celebrating many more Gudi Padwas with our community. Thank you to all who participated and made the event a success!</p>
-<hr>
-<p><em>Gudi Padwa Hardik Shubhechha!</em></p>
-
-    </div>
-
-    
 </div>
 
     </main>

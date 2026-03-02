@@ -2,6 +2,9 @@ module.exports = function (eleventyConfig) {
     // Pass through the images folder
     eleventyConfig.addPassthroughCopy("src/images");
 
+    // Pass through the CSS folder
+    eleventyConfig.addPassthroughCopy("src/css");
+
     // Format date filter for Nunjucks
     eleventyConfig.addFilter("formatDate", function (dateObj) {
         if (!dateObj) return "";

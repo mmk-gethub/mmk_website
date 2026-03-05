@@ -4,7 +4,7 @@ layout: event.njk
 title: "Makar Sankranti 2025"
 date: "2025-01-14"
 category: "Festival"
-image: "/images/global/background.jpeg"
+image: "/images/global/background.webp"
 excerpt: "A joyful Makar Sankranti gathering with traditional celebration, food, and community bonding."
 ---
 

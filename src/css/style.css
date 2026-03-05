@@ -85,7 +85,7 @@
         .logo-img {
             width: 80px;
             height: 80px;
-            border-radius: 50%;
+            border-radius: 16px;
             object-fit: cover;
             border: 0px solid var(--primary);
         }
@@ -143,40 +143,66 @@
         }
 
         .theme-toggle {
-            background: var(--surface);
-            border: 1px solid var(--surface-light);
-            border-radius: 50%;
-            width: 44px;
-            height: 44px;
+            position: relative;
+            width: 76px;
+            height: 36px;
+            border-radius: 18px;
+            background: #2a2a2a;
+            border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: var(--text-primary);
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
+            justify-content: space-between;
+            padding: 0 10px;
             margin-left: 1rem;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease;
         }
 
-        .theme-toggle:hover {
-            background: var(--primary);
-            border-color: var(--primary);
+        [data-theme="light"] .theme-toggle {
+            background: #e8e8e8;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .theme-toggle i {
+            z-index: 2;
+            font-size: 1rem;
+            transition: color 0.3s ease;
         }
 
         .theme-toggle .fa-sun {
-            display: none;
+            color: #888;
         }
 
         .theme-toggle .fa-moon {
-            display: block;
+            color: #fff;
         }
 
         [data-theme="light"] .theme-toggle .fa-sun {
-            display: block;
+            color: #fff;
         }
 
         [data-theme="light"] .theme-toggle .fa-moon {
-            display: none;
+            color: #888;
+        }
+
+        .theme-toggle-thumb {
+            position: absolute;
+            top: 4px;
+            left: 44px;
+            /* Right side: 76 - 4 - 28 = 44 */
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #555;
+            transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
+
+        [data-theme="light"] .theme-toggle-thumb {
+            left: 4px;
+            background: #fbad31;
         }
 
         .hamburger span {
@@ -204,9 +230,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('/images/events/diwali-2024/DSC03958.JPG') center/cover no-repeat;
-            filter: blur(8px);
-            transform: scale(1.06);
+            background: url('/images/global/hero_background.png') center/contain no-repeat;
             z-index: 0;
         }
 
@@ -217,10 +241,16 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(15, 15, 26, 0.68) 0%, rgba(30, 30, 50, 0.62) 100%),
-                radial-gradient(circle at 30% 70%, rgba(128, 0, 0, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 70% 30%, rgba(128, 0, 0, 0.15) 0%, transparent 50%);
+            background: linear-gradient(135deg, rgba(15, 15, 26, 0.45) 0%, rgba(30, 30, 50, 0.4) 100%),
+                radial-gradient(circle at 30% 70%, rgba(128, 0, 0, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(128, 0, 0, 0.1) 0%, transparent 50%);
             z-index: 1;
+        }
+
+        [data-theme="light"] .hero::after {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(240, 245, 255, 0.35) 100%),
+                radial-gradient(circle at 30% 70%, rgba(230, 180, 100, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(230, 180, 100, 0.1) 0%, transparent 50%);
         }
 
         .hero-content {
@@ -252,8 +282,8 @@
         }
 
         [data-theme="light"] .hero h1 {
-            color: #ffffff;
-            text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75), 0 1px 2px rgba(0, 0, 0, 0.9);
+            color: #1A2235;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8), 0 1px 2px rgba(255, 255, 255, 0.9);
         }
 
         .hero h1 .marathi {
@@ -270,6 +300,12 @@
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+        }
+
+        [data-theme="light"] .hero p {
+            color: #1A2235;
+            text-shadow: 0 1px 5px rgba(255, 255, 255, 0.8);
+            font-weight: 500;
         }
 
         .hero-buttons {
@@ -294,6 +330,10 @@
             background: var(--gradient);
             color: var(--text-primary);
             box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        [data-theme="light"] .btn-primary {
+            color: #ffffff;
         }
 
         .btn-primary:hover {

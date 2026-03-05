@@ -5,19 +5,18 @@ title: "Gudi Padwa 2026 - New Year Celebrations"
 date: "2026-03-30"
 category: "Festival"
 image: "/images/global/background.jpeg"
-excerpt: "Welcoming the Marathi new year with traditional Gudi Padwa celebrations featuring authentic Marathi cuisine and cultural performances."
+excerpt: "Welcoming the Marathi New Year with Gudi Pooja, cultural performances, and a family poster-making competition."
 ---
 
-# Gudi Padwa 2026 - Marathi New Year Celebrations
+# Gudi Padwa (गुढीपाडवा ) 2026 - Marathi New Year Celebrations
 
-Maharashtra Mandal Krakow celebrating Gudi Padwa, the Marathi New Year, with traditional zeal and enthusiasm. The festival marks the beginning of the spring harvest season and will celebrate with special foods, decorations, and rituals.
+Maharashtra Mandal Krakow celebrating Gudi Padwa, the Marathi New Year, with traditional zeal and enthusiasm. The festival marks the beginning of the spring harvest season and will celebrate with special foods, decorations and rituals.
 
 ## Celebration Highlights
 
-- **Gudi Installation**: A traditional Gudi (swayambhu) was hoisted at the venue
-- **Traditional Puran Poli**: Community members prepared and shared authentic Marathi dishes
+- **Gudi Pooja**: A traditional Gudi (swayambhu) was hoisted at the venue
 - **Cultural Program**: Traditional Marathi songs and dances
-- **Rangoli Competition**: Beautiful rangoli designs depicting the festival
+- **Poster Making Competition**: Poster Making Competition for Families
 
 ## Traditional Significance
 
@@ -26,10 +25,8 @@ Gudi Padwa holds special significance in Marathi culture. The Gudi symbolizes vi
 ## Photo Gallery
 
 ![Gudi Padwa Celebration](/images/global/background.jpeg)
-*The decorated Gudi*
 
 ![Traditional Food](/images/global/logo.png)
-*Puran Poli and other Marathi delicacies*
 
 ## Looking Forward
 

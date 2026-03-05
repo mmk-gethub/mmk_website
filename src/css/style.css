@@ -83,11 +83,11 @@
         }
 
         .logo-img {
-            width: 80px;
-            height: 80px;
-            border-radius: 16px;
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
             object-fit: cover;
-            border: 0px solid var(--primary);
+            border: 0px dotted var(--primary);
         }
 
         .logo-text {
@@ -1016,10 +1016,33 @@
             }
 
             .theme-toggle {
-                position: fixed;
-                top: 1rem;
-                right: 4.5rem;
-                z-index: 1001;
+                position: relative;
+                top: 0;
+                right: 0;
+                order: 2;
+                margin-left: auto;
+                margin-right: 1rem;
+                transform: scale(0.9);
+            }
+
+            .logo {
+                order: 1;
+            }
+
+            .hamburger {
+                order: 3;
+            }
+
+            .logo-img {
+                width: 44px;
+                height: 44px;
+                border-radius: 8px;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+                line-height: 1.2;
+                max-width: 140px;
             }
 
             .hamburger.active span:nth-child(1) {

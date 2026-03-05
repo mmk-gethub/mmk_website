@@ -4,7 +4,7 @@ layout: event.njk
 title: "Shivjayanti 2026"
 date: "2026-02-19"
 category: "Cultural"
-image: "/images/global/background.jpeg"
+image: "/images/global/background.webp"
 excerpt: "A heartfelt community celebration honoring Chhatrapati Shivaji Maharaj with cultural activities and performances."
 ---
 

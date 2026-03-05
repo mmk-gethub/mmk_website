@@ -230,7 +230,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('/images/global/hero_background.png') center/contain no-repeat;
+            background: url('/images/global/hero_background.webp') center/contain no-repeat;
             z-index: 0;
         }
 
@@ -1055,6 +1055,11 @@
 
             .hamburger.active span:nth-child(3) {
                 transform: rotate(-45deg) translate(5px, -5px);
+            }
+
+            .hero::before {
+                background-size: cover;
+                background-position: center;
             }
 
             .events-timeline::before {

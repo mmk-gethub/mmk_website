@@ -1057,6 +1057,11 @@
                 transform: rotate(-45deg) translate(5px, -5px);
             }
 
+            .hero::before {
+                background-size: cover;
+                background-position: center;
+            }
+
             .events-timeline::before {
                 left: 20px;
             }

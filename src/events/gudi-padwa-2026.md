@@ -1,8 +1,8 @@
 ---
 tags: event
 layout: event.njk
-title: "Gudi Padwa 2025 - New Year Celebrations"
-date: "2025-03-30"
+title: "Gudi Padwa 2026 - New Year Celebrations"
+date: "2026-03-30"
 category: "Festival"
 image: "/images/global/background.jpeg"
 excerpt: "Welcoming the Marathi new year with traditional Gudi Padwa celebrations featuring authentic Marathi cuisine and cultural performances."

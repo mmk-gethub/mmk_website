@@ -1,8 +1,8 @@
 ---
 tags: event
 layout: event.njk
-title: "Diwali - Festival of Lights 2024"
-date: "2024-11-01"
+title: "Diwali 2025 - Festival of Lights"
+date: "2025-11-01"
 category: "Festival"
 image: "/images/global/background.jpeg"
 excerpt: "Join us for the Festival of Lights, featuring cultural performances, delicious food, and fireworks."
@@ -13,7 +13,7 @@ sponsors:
     logo: "/images/sponsors/sponsor2.svg"
 ---
 
-# Diwali - Festival of Lights 2024
+# Diwali 2025 - Festival of Lights
 
 The Maharashtra Mandal Krakow joined hands with the Indian community in Krakow to celebrate Diwali, the festival of lights, in a grand manner. The celebration brought warmth and light to the dark Polish winter evenings.
 

@@ -1,8 +1,8 @@
 ---
 tags: event
 layout: event.njk
-title: "Ganeshotsav 2024 Celebrations in Krakow"
-date: "2024-09-07"
+title: "Ganeshotsav 2025 Celebrations in Krakow"
+date: "2025-09-07"
 category: "Festival"
 image: "/images/global/background.jpeg"
 excerpt: "A grand celebration of Ganeshotsav 2024 at Radha Govind Bhakti Yog Temple with 10 days of devotion, cultural programs, and community togetherness."
@@ -15,7 +15,7 @@ sponsors:
     logo: "/images/sponsors/sponsor3.svg"
 ---
 
-# Ganeshotsav 2024 Celebrations in Krakow
+# Ganeshotsav 2025 Celebrations in Krakow
 
 The Maharashtra Mandal Krakow celebrated Ganeshotsav 2024 with great enthusiasm and devotion at the Radha Govind Bhakti Yog Temple in Krakow. The 10-day festival brought together the Marathi community and friends from various Indian communities in Poland.
 

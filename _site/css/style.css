@@ -524,6 +524,28 @@
             color: var(--accent);
             font-size: 0.85rem;
             margin-top: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .event-action {
+            margin-top: 0;
+        }
+
+        .event-action .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.4rem 0.95rem;
+            font-size: 0.78rem;
+            font-weight: 600;
+            border-radius: 999px;
+            line-height: 1.2;
+            box-shadow: 0 3px 10px rgba(255, 107, 53, 0.25);
+        }
+
+        .event-action .btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 14px rgba(255, 107, 53, 0.3);
         }
 
         .view-all-events {

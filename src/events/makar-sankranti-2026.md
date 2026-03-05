@@ -4,7 +4,7 @@ layout: event.njk
 title: "Makar Sankranti 2026"
 date: "2026-01-14"
 category: "Festival"
-image: "/images/global/background.jpeg"
+image: "/images/global/background.webp"
 excerpt: "Community get-together with Haldi-Kunku, traditional food, and festive games to begin the year."
 ---
 

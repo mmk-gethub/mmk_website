@@ -5,7 +5,7 @@ title: "The Colors of Krakow"
 author: "Aarushi (Age 12)"
 category: "Poetry"
 date: "2024-03-02"
-image: "/images/community_updates/sample-poem/DSC03973.JPG"
+image: "/images/community_updates/sample-poem/DSC03973.webp"
 excerpt: "A short poem about how Krakow's streets blend with the vibrant spirit of our culture."
 ---
 

@@ -4,7 +4,7 @@ layout: event.njk
 title: "Diwali 2025 - Festival of Lights"
 date: "2025-11-01"
 category: "Festival"
-image: "/images/global/background.jpeg"
+image: "/images/global/background.webp"
 excerpt: "Join us for the Festival of Lights, featuring cultural performances, delicious food, and fireworks."
 sponsors:
   - name: "Sponsor 1"
@@ -33,10 +33,10 @@ This Diwali celebration was special as it brought together not just the Marathi 
 
 ## Photo Gallery
 
-![Diwali Celebration](/images/global/background.jpeg)
+![Diwali Celebration](/images/global/background.webp)
 *Diya decorations*
 
-![Rangoli Competition](/images/global/maharashtra_map.png)
+![Rangoli Competition](/images/global/maharashtra_map.webp)
 *Beautiful rangoli designs*
 
 ## Thank You

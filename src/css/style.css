@@ -784,6 +784,71 @@
             gap: 0.75rem;
         }
 
+        /* Sponsors Section */
+        .sponsors {
+            background: var(--secondary);
+            padding-top: 64px;
+            padding-bottom: 64px;
+        }
+
+        .sponsors-carousel {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+        }
+
+        .sponsors-track {
+            display: flex;
+            align-items: center;
+            width: max-content;
+            gap: 1rem;
+            animation: sponsorScroll 20s linear infinite;
+            padding: 0.5rem 0;
+        }
+
+        .sponsors-carousel:hover .sponsors-track {
+            animation-play-state: paused;
+        }
+
+        .sponsor-card {
+            width: 180px;
+            height: 92px;
+            border-radius: 14px;
+            background: var(--surface);
+            border: 1px solid var(--surface-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            flex: 0 0 auto;
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary);
+        }
+
+        .sponsor-card img {
+            max-width: 76%;
+            max-height: 42px;
+            object-fit: contain;
+            opacity: 0.92;
+        }
+
+        @keyframes sponsorScroll {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(calc(-50% - 0.5rem));
+            }
+        }
+
         /* Contact Section */
         .contact {
             background: var(--secondary);
@@ -1081,6 +1146,15 @@
 
             .section-header h2 {
                 font-size: 2rem;
+            }
+
+            .sponsor-card {
+                width: 150px;
+                height: 78px;
+            }
+
+            .sponsor-card img {
+                max-height: 36px;
             }
         }
 

@@ -4,7 +4,7 @@ layout: event.njk
 title: "Diwali 2025 - Festival of Lights"
 date: "2025-11-01"
 category: "Festival"
-image: "/images/global/background.webp"
+image: "/images/events/diwali-2024/DSC03958.webp"
 excerpt: "Join us for the Festival of Lights, featuring cultural performances, delicious food, and fireworks."
 sponsors:
   - name: "Sponsor 1"

@@ -4,7 +4,7 @@ layout: event.njk
 title: "Ganeshotsav 2025 Celebrations in Krakow"
 date: "2025-09-07"
 category: "Festival"
-image: "/images/global/background.webp"
+image: "/images/events/ganeshotsav-2024/DSC05518.webp"
 excerpt: "A grand celebration of Ganeshotsav 2024 at Radha Govind Bhakti Yog Temple with 10 days of devotion, cultural programs, and community togetherness."
 sponsors:
   - name: "Sponsor 1"

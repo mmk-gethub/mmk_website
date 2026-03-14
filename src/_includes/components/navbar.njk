@@ -1,3 +1,31 @@
+{# Find the newest post across events and community updates #}
+{% set latestTimestamp = 0 %}
+{% set latestUrl = "" %}
+
+{% for post in collections.post %}
+    {% set postTs = post.date | timestamp %}
+    {% if postTs > latestTimestamp %}
+        {% set latestTimestamp = postTs %}
+        {% set latestUrl = post.url %}
+    {% endif %}
+{% endfor %}
+
+{% for post in collections.event %}
+    {% set postTs = post.date | timestamp %}
+    {% if postTs > latestTimestamp %}
+        {% set latestTimestamp = postTs %}
+        {% set latestUrl = post.url %}
+    {% endif %}
+{% endfor %}
+
+<div class="updates-banner" id="updatesBanner" data-latest-timestamp="{{ latestTimestamp }}" style="display: none;">
+    <div class="updates-banner-content">
+        <span class="updates-badge">New</span>
+        <a href="{{ latestUrl }}" class="updates-text">We have new updates! Check out our latest events and community posts.</a>
+    </div>
+    <button class="updates-close" onclick="closeUpdatesBanner()" aria-label="Close notification">&times;</button>
+</div>
+
 <nav class="navbar">
     <a href="/" class="logo">
         <img src="/images/global/logo.webp" alt="Maharashtra Mandal Krakow" class="logo-img">
@@ -9,6 +37,7 @@
         <li><a href="/#events">Events</a></li>
         <li><a href="/#gallery">Gallery</a></li>
         <li><a href="/community_updates/">Community</a></li>
+        <li><a href="/committee/">Committee</a></li>
         <li><a href="/#contact">Contact</a></li>
     </ul>
     <div class="hamburger">

@@ -4,7 +4,7 @@ layout: event.njk
 title: "Gudi Padwa 2026 - New Year Celebrations"
 date: "2026-03-30"
 category: "Festival"
-image: "/images/events/2026/march/gudi-padwa-2026/gudi_padwa_placeholder.jpg"
+image: "/images/events/2026/march/gudi-padwa-2026/gudi_padwa_placeholder.webp"
 excerpt: "Welcoming the Marathi new year with traditional Gudi Padwa celebrations featuring authentic Marathi cuisine and cultural performances."
 ---
 
@@ -80,7 +80,7 @@ According to tradition, Gudi Padwa commemorates several auspicious events:
 
 ## Photo Gallery
 
-![Gudi Padwa Celebration](/images/events/2026/march/gudi-padwa-2026/gudi_padwa_placeholder.jpg)
+![Gudi Padwa Celebration](/images/events/2026/march/gudi-padwa-2026/gudi_padwa_placeholder.webp)
 *The decorated Gudi*
 
 ## Looking Forward

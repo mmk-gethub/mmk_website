@@ -24,7 +24,7 @@ Gudi Padwa holds special significance in Marathi culture. The Gudi symbolizes vi
 
 ## Photo Gallery
 
-![Traditional Food](/images/global/logo.png)
+![Traditional Food](/images/global/logo.webp)
 ![Gudi Padwa Celebration](/images/global/background.webp)
 *The decorated Gudi*
 

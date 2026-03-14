@@ -4,7 +4,7 @@ layout: event.njk
 title: "Makar Sankranti 2026"
 date: "2026-01-24"
 category: "Festival"
-image: "/images/events/2026/january/makar-sankranti-2026/ms-2026-1.jpg"
+image: "/images/events/2026/january/makar-sankranti-2026/ms-2026-1.webp"
 excerpt: "Traditional Haldi-Kunku get-together with festive games and celebrations by the Marathi community in Krakow."
 ---
 
@@ -41,10 +41,10 @@ To ensure that everyone could participate comfortably, it was decided to celebra
 
 ## Photo Gallery
 
-![Makar Sankranti Celebration 1](/images/events/makar-sankranti-2026/ms-2026-1.jpg)
-![Makar Sankranti Celebration 2](/images/events/makar-sankranti-2026/ms-2026-2.png)
-![Makar Sankranti Celebration 3](/images/events/makar-sankranti-2026/ms-2026-3.png)
-![Makar Sankranti Celebration 4](/images/events/makar-sankranti-2026/ms-2026-4.png)
+![Makar Sankranti Celebration 1](/images/events/makar-sankranti-2026/ms-2026-1.webp)
+![Makar Sankranti Celebration 2](/images/events/makar-sankranti-2026/ms-2026-2.webp)
+![Makar Sankranti Celebration 3](/images/events/makar-sankranti-2026/ms-2026-3.webp)
+![Makar Sankranti Celebration 4](/images/events/makar-sankranti-2026/ms-2026-4.webp)
 *Makar Sankranti community celebration in Krakow*
 
 

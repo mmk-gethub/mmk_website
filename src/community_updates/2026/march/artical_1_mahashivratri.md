@@ -5,7 +5,7 @@ title: "शिवरात्री, शून्य आणि परदेश�
 author: "अनुराधा गिरी"
 category: "Article"
 date: "2026-03-07"
-image: "/images/community_updates/2026/march/artical_1_mahashivratri/shivlingam.jpg"
+image: "/images/community_updates/2026/march/artical_1_mahashivratri/shivlingam.webp"
 excerpt: "पोलंडमध्ये साजरी केलेल्या साध्या, शांत आणि मनाला स्पर्शून जाणाऱ्या शिवरात्रीचा अनुभव."
 ---
 

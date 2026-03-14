@@ -37,7 +37,7 @@ module.exports = function (eleventyConfig) {
                     const stat = fs.statSync(fullPath);
                     if (stat.isDirectory()) {
                         readImages(fullPath);
-                    } else if (file.match(/\.(jpg|jpeg|png|webp|gif)$/i)) {
+                    } else if (file.match(/\.(webp|gif)$/i)) {
                         // Keep the original path relative to the site root for output
                         // e.g. src/images/events/2026/march/event/image.jpg -> /images/events/2026/march/event/image.jpg
                         const sitePath = fullPath.replace(path.join(__dirname, "src"), "");

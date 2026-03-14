@@ -5,7 +5,7 @@ title: "मराठी संस्कृती आणि साहित्य
 author: "Nikhil Jadhav"
 category: "Article"
 date: "2026-03-14"
-image: "/images/community_updates/2026/march/artical_5_digital_heritage/mahabharat_chandoba.jpg"
+image: "/images/community_updates/2026/march/artical_5_digital_heritage/mahabharat_chandoba.webp"
 excerpt: "डिजिटल युगात आपली संस्कृती आणि समृद्ध साहित्य पुढील पिढीपर्यंत पोहोचवण्यासाठी 'महाभारत' आणि 'चांदोबा' या दोन नवीन वेबसाइट्सची निर्मिती."
 ---
 

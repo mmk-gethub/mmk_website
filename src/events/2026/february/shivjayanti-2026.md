@@ -4,7 +4,7 @@ layout: event.njk
 title: "Shivjayanti 2026"
 date: "2026-02-21"
 category: "Cultural"
-image: "/images/events/2026/february/shivjayanti-2026/shiv-2026-1.jpeg"
+image: "/images/events/2026/february/shivjayanti-2026/shiv-2026-2.jpeg"
 excerpt: "The birth anniversary of Chhatrapati Shivaji Maharaj was celebrated with great enthusiasm and pride by Maharashtra Mandal Krakow."
 ---
 
@@ -34,9 +34,9 @@ The program began at 3:00 PM with a traditional puja ceremony, followed by a var
 
 ## Photo Gallery
 
-![Shivjayanti Celebration 1](/images/events/shivjayanti-2026/shiv-2026-1.jpeg)
-![Shivjayanti Celebration 2](/images/events/shivjayanti-2026/shiv-2026-2.jpeg)
+![Shivjayanti Celebration 1](/images/events/shivjayanti-2026/shiv-2026-2.jpeg)
+![Shivjayanti Celebration 2](/images/events/shivjayanti-2026/shiv-2026-4.jpg)
 ![Shivjayanti Celebration 3](/images/events/shivjayanti-2026/shiv-2026-3.jpg)
-![Shivjayanti Celebration 4](/images/events/shivjayanti-2026/shiv-2026-4.jpg)
+![Shivjayanti Celebration 4](/images/events/shivjayanti-2026/shiv-2026-1.jpeg)
 *Shivjayanti 2026 celebration moments in Krakow*
 

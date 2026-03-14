@@ -14,6 +14,12 @@ module.exports = function (eleventyConfig) {
         });
     });
 
+    // Convert Date object to milliseconds timestamp
+    eleventyConfig.addFilter("timestamp", function (dateObj) {
+        if (!dateObj) return 0;
+        return new Date(dateObj).getTime();
+    });
+
     // Custom collection: Read all images from src/images/events
     const fs = require("fs");
     const path = require("path");

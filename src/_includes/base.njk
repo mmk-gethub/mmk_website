@@ -69,6 +69,41 @@
             }
         });
 
+        // Updates Banner Logic (7 day expiration)
+        function initUpdatesBanner() {
+            const banner = document.getElementById('updatesBanner');
+            if (!banner) return;
+            
+            // Check if user manually dismissed it
+            if (localStorage.getItem('updatesBannerDismissed') === 'true') {
+                return;
+            }
+
+            const latestTimestamp = parseInt(banner.getAttribute('data-latest-timestamp'), 10);
+            if (!latestTimestamp) return;
+
+            const now = Date.now();
+            const sevenDaysInMs = 7 * 24 * 60 * 60 * 1000;
+
+            // If the latest post is newer than 7 days ago, show banner
+            if (now - latestTimestamp < sevenDaysInMs) {
+                banner.style.display = 'flex';
+                document.body.classList.add('has-updates-banner');
+            }
+        }
+
+        function closeUpdatesBanner() {
+            const banner = document.getElementById('updatesBanner');
+            if (banner) {
+                banner.style.display = 'none';
+                document.body.classList.remove('has-updates-banner');
+                localStorage.setItem('updatesBannerDismissed', 'true');
+            }
+        }
+
+        // Initialize banner
+        initUpdatesBanner();
+
         // Mobile Navigation
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');

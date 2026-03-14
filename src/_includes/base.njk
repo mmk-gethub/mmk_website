@@ -34,7 +34,9 @@
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
         <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-prev" onclick="changeLightboxImage(-1)"><i class="fas fa-chevron-left"></i></button>
         <img id="lightbox-img" src="" alt="Gallery Image">
+        <button class="lightbox-next" onclick="changeLightboxImage(1)"><i class="fas fa-chevron-right"></i></button>
     </div>
 
     <script>
@@ -109,14 +111,29 @@
         });
 
         // Lightbox
+        let currentLightboxIndex = 0;
+        let galleryImages = [];
+
         function openLightbox(element) {
+            // Re-fetch all visible gallery images dynamically when opening
+            // This ensures it works on any page with a .gallery-grid
+            const grid = element.closest('.gallery-grid');
+            if (grid) {
+                galleryImages = Array.from(grid.querySelectorAll('.gallery-item img'));
+                const img = element.querySelector('img');
+                currentLightboxIndex = galleryImages.findIndex(i => i.src === img.src);
+            }
+
             const img = element.querySelector('img');
             const lightbox = document.getElementById('lightbox');
             const lightboxImg = document.getElementById('lightbox-img');
 
             lightboxImg.src = img.src;
+            if(img.alt) lightboxImg.alt = img.alt;
+            
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden';
+            updateLightboxNavVisibility();
         }
 
         function closeLightbox() {
@@ -125,15 +142,75 @@
             document.body.style.overflow = '';
         }
 
-        // Close lightbox on escape key
+        function changeLightboxImage(direction) {
+            if (galleryImages.length === 0) return;
+            
+            currentLightboxIndex += direction;
+            
+            // Loop around if at the end/beginning
+            if (currentLightboxIndex >= galleryImages.length) {
+                currentLightboxIndex = 0;
+            } else if (currentLightboxIndex < 0) {
+                currentLightboxIndex = galleryImages.length - 1;
+            }
+            
+            const lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = galleryImages[currentLightboxIndex].src;
+            lightboxImg.alt = galleryImages[currentLightboxIndex].alt || "Gallery Image";
+        }
+
+        function updateLightboxNavVisibility() {
+            const prevBtn = document.querySelector('.lightbox-prev');
+            const nextBtn = document.querySelector('.lightbox-next');
+            if (galleryImages.length <= 1) {
+                if(prevBtn) prevBtn.style.display = 'none';
+                if(nextBtn) nextBtn.style.display = 'none';
+            } else {
+                if(prevBtn) prevBtn.style.display = 'flex';
+                if(nextBtn) nextBtn.style.display = 'flex';
+            }
+        }
+
+        // Keyboard navigation for lightbox
         document.addEventListener('keydown', (e) => {
+            const lightbox = document.getElementById('lightbox');
+            if (!lightbox.classList.contains('active')) return;
+            
             if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+            if (e.key === 'ArrowRight') changeLightboxImage(1);
         });
 
         // Close lightbox on background click
         document.getElementById('lightbox').addEventListener('click', (e) => {
             if (e.target.id === 'lightbox') closeLightbox();
         });
+        
+        // Mobile swipe support for lightbox
+        let touchstartX = 0;
+        let touchendX = 0;
+        
+        document.getElementById('lightbox').addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        }, {passive: true});
+
+        document.getElementById('lightbox').addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, {passive: true});
+        
+        function handleSwipe() {
+            const threshold = 50;
+            const lightbox = document.getElementById('lightbox');
+            if (!lightbox.classList.contains('active')) return;
+            
+            if (touchendX < touchstartX - threshold) {
+                changeLightboxImage(1); // Swipe left = next
+            }
+            if (touchendX > touchstartX + threshold) {
+                changeLightboxImage(-1); // Swipe right = prev
+            }
+        }
 
         // Scroll animations
         const fadeElements = document.querySelectorAll('.fade-in');

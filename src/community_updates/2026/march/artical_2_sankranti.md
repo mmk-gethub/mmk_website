@@ -5,7 +5,7 @@ title: "Sankranti: हळदीकुंकू?"
 author: "अनुराधा गिरी"
 category: "Article"
 date: "2026-03-08"
-image: "/images/community_updates/artical_2_sankranti/haladi_kunku.jpg"
+image: "/images/community_updates/2026/march/artical_2_sankranti/haladi_kunku.jpg"
 excerpt: "परदेशात राहूनही हळदीकुंकूच्या निमित्ताने जपलेली मातीची ओढ, मैत्री आणि मराठी संस्कृतीचा वारसा."
 ---
 

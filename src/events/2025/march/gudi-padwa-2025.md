@@ -1,14 +1,14 @@
 ---
 tags: event
 layout: event.njk
-title: "Gudi Padwa 2026 - New Year Celebrations"
-date: "2026-03-30"
+title: "Gudi Padwa 2025 - New Year Celebrations"
+date: "2025-03-30"
 category: "Festival"
-image: "/images/events/gudi-padwa-2026/DSC07645.webp"
+image: "/images/events/2025/march/gudi-padwa-2025/DSC07645.webp"
 excerpt: "Welcoming the Marathi new year with traditional Gudi Padwa celebrations featuring authentic Marathi cuisine and cultural performances."
 ---
 
-# Gudi Padwa (गुढीपाडवा ) 2026 - Marathi New Year Celebrations
+# Gudi Padwa (गुढीपाडवा ) 2025 - Marathi New Year Celebrations
 
 Maharashtra Mandal Krakow celebrating Gudi Padwa, the Marathi New Year, with traditional zeal and enthusiasm. The festival marks the beginning of the spring harvest season and will celebrate with special foods, decorations and rituals.
 

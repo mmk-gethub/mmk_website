@@ -4,7 +4,7 @@ layout: event.njk
 title: "Shivjayanti 2026"
 date: "2026-02-21"
 category: "Cultural"
-image: "/images/events/shivjayanti-2026/shiv-2026-1.jpeg"
+image: "/images/events/2026/february/shivjayanti-2026/shiv-2026-1.jpeg"
 excerpt: "The birth anniversary of Chhatrapati Shivaji Maharaj was celebrated with great enthusiasm and pride by Maharashtra Mandal Krakow."
 ---
 

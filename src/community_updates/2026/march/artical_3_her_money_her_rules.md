@@ -5,7 +5,7 @@ title: "Money: Her Money, Her Rules"
 author: "Sarika Surve"
 category: "Article"
 date: "2026-03-08"
-image: "/images/community_updates/artical_3_her_money_her_rules/her_money_her_rules.jpg"
+image: "/images/community_updates/2026/march/artical_3_her_money_her_rules/her_money_her_rules.jpg"
 excerpt: "Financial literacy for women is not optional; it is fundamental to security, dignity, and long-term independence."
 ---
 

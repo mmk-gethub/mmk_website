@@ -158,6 +158,19 @@
         color: var(--text-secondary);
     }
 
+    .prose a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+        border-bottom: 1px dotted var(--primary);
+        transition: all 0.3s ease;
+    }
+
+    .prose a:hover {
+        color: var(--primary-dark);
+        border-bottom-style: solid;
+    }
+
     .prose ul,
     .prose ol {
         margin-bottom: 1.5rem;

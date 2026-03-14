@@ -4,7 +4,7 @@ layout: event.njk
 title: "Makar Sankranti 2026"
 date: "2026-01-24"
 category: "Festival"
-image: "/images/events/makar-sankranti-2026/ms-2026-1.jpg"
+image: "/images/events/2026/january/makar-sankranti-2026/ms-2026-1.jpg"
 excerpt: "Traditional Haldi-Kunku get-together with festive games and celebrations by the Marathi community in Krakow."
 ---
 

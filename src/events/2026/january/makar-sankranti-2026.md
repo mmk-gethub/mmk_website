@@ -41,10 +41,10 @@ To ensure that everyone could participate comfortably, it was decided to celebra
 
 ## Photo Gallery
 
-![Makar Sankranti Celebration 1](/images/events/makar-sankranti-2026/ms-2026-1.webp)
-![Makar Sankranti Celebration 2](/images/events/makar-sankranti-2026/ms-2026-2.webp)
-![Makar Sankranti Celebration 3](/images/events/makar-sankranti-2026/ms-2026-3.webp)
-![Makar Sankranti Celebration 4](/images/events/makar-sankranti-2026/ms-2026-4.webp)
+![Makar Sankranti Celebration 1](/images/events/2026/january/makar-sankranti-2026/ms-2026-1.webp)
+![Makar Sankranti Celebration 2](/images/events/2026/january/makar-sankranti-2026/ms-2026-2.webp)
+![Makar Sankranti Celebration 3](/images/events/2026/january/makar-sankranti-2026/ms-2026-3.webp)
+![Makar Sankranti Celebration 4](/images/events/2026/january/makar-sankranti-2026/ms-2026-4.webp)
 *Makar Sankranti community celebration in Krakow*
 
 

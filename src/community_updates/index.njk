@@ -92,6 +92,7 @@ layout: base.njk
         flex-direction: column;
         height: 100%;
         border: 1px solid var(--surface-light);
+        position: relative;
     }
 
     .post-card:hover {
@@ -188,7 +189,14 @@ layout: base.njk
         margin-top: auto;
     }
 
-    .post-link:hover {
+    .post-link::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+    .post-card:hover .post-link {
         gap: 0.8rem;
     }
 </style>

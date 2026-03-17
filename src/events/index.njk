@@ -115,6 +115,8 @@ layout: base.njk
         display: flex;
         flex-direction: column;
         height: 100%;
+        position: relative;
+        cursor: pointer;
     }
 
     .event-card-new:hover {
@@ -152,6 +154,7 @@ layout: base.njk
         text-transform: uppercase;
         letter-spacing: 1px;
         box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        z-index: 2;
     }
 
     .card-content {
@@ -267,6 +270,7 @@ layout: base.njk
                     {% if post.data.excerpt %}
                     <p class="card-excerpt">{{ post.data.excerpt }}</p>
                     {% endif %}
+                    <a href="{{ post.url }}" class="event-card-overlay" aria-hidden="true"></a>
                     <a href="{{ post.url }}" class="card-link">Read More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </article>
@@ -293,6 +297,7 @@ layout: base.njk
                     <span><i class="far fa-clock"></i> February 2026</span>
                 </div>
                 <p class="card-excerpt">Celebrated with kids cultural activities and community participation.</p>
+                <a href="/events/2026/february/shivjayanti-2026/" class="event-card-overlay" aria-hidden="true"></a>
                 <a href="/events/2026/february/shivjayanti-2026/" class="card-link">View Event <i class="fas fa-arrow-right"></i></a>
             </div>
         </article>
@@ -308,6 +313,7 @@ layout: base.njk
                     <span><i class="far fa-clock"></i> January 2026</span>
                 </div>
                 <p class="card-excerpt">Traditional Haldi-Kunku get-together with festive games and celebrations.</p>
+                <a href="/events/2026/january/makar-sankranti-2026/" class="event-card-overlay" aria-hidden="true"></a>
                 <a href="/events/2026/january/makar-sankranti-2026/" class="card-link">View Event <i class="fas fa-arrow-right"></i></a>
             </div>
         </article>
@@ -323,6 +329,7 @@ layout: base.njk
                     <span><i class="far fa-clock"></i> November 2025</span>
                 </div>
                 <p class="card-excerpt">Festival of lights celebration with performances, food, and community gathering.</p>
+                <a href="/events/2024/november/diwali-2024/" class="event-card-overlay" aria-hidden="true"></a>
                 <a href="/events/2024/november/diwali-2024/" class="card-link">View Event <i class="fas fa-arrow-right"></i></a>
             </div>
         </article>
@@ -338,6 +345,7 @@ layout: base.njk
                     <span><i class="far fa-clock"></i> September 2025</span>
                 </div>
                 <p class="card-excerpt">Devotional celebration with cultural program and community participation.</p>
+                <a href="/events/2024/september/ganeshotsav-2024/" class="event-card-overlay" aria-hidden="true"></a>
                 <a href="/events/2024/september/ganeshotsav-2024/" class="card-link">View Event <i class="fas fa-arrow-right"></i></a>
             </div>
         </article>
@@ -353,6 +361,7 @@ layout: base.njk
                     <span><i class="far fa-clock"></i> March 2025</span>
                 </div>
                 <p class="card-excerpt">Marathi new year celebration with rangoli, traditional food, and festivities.</p>
+                <a href="/events/2025/march/gudi-padwa-2025/" class="event-card-overlay" aria-hidden="true"></a>
                 <a href="/events/2025/march/gudi-padwa-2025/" class="card-link">View Event <i class="fas fa-arrow-right"></i></a>
             </div>
         </article>
@@ -368,6 +377,7 @@ layout: base.njk
                     <span><i class="far fa-clock"></i> January 2025</span>
                 </div>
                 <p class="card-excerpt">A festive community gathering to begin the year with traditional customs.</p>
+                <a href="/events/2025/january/makar-sankranti-2025/" class="event-card-overlay" aria-hidden="true"></a>
                 <a href="/events/2025/january/makar-sankranti-2025/" class="card-link">View Event <i class="fas fa-arrow-right"></i></a>
             </div>
         </article>

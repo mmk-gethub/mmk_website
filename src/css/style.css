@@ -45,6 +45,7 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+            margin: 0;
         }
 
         /* Scrollbar */
@@ -311,7 +312,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('/images/global/hero_background.webp') center/contain no-repeat;
+            background: url('/images/global/hero_background.webp') center/cover no-repeat;
             z-index: 0;
         }
 
@@ -546,6 +547,7 @@
             width: 100%;
             position: relative;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .event-card:hover {
@@ -617,6 +619,16 @@
             border-radius: 999px;
             line-height: 1.2;
             box-shadow: 0 3px 10px rgba(255, 107, 53, 0.25);
+        }
+
+        .event-card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            cursor: pointer;
         }
 
         .event-action .btn:hover {
@@ -1075,6 +1087,7 @@
 
         .footer-links {
             list-style: none;
+            padding: 0;
         }
 
         .footer-links li {
@@ -1465,7 +1478,6 @@
             }
 
             .footer-links {
-                padding: 0;
                 text-align: center;
             }
         }

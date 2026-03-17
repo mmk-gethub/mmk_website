@@ -34,9 +34,9 @@ The program began at 3:00 PM with a traditional puja ceremony, followed by a var
 
 ## Photo Gallery
 
-![Shivjayanti Celebration 1](/images/events/shivjayanti-2026/shiv-2026-2.webp)
-![Shivjayanti Celebration 2](/images/events/shivjayanti-2026/shiv-2026-4.webp)
-![Shivjayanti Celebration 3](/images/events/shivjayanti-2026/shiv-2026-3.webp)
-![Shivjayanti Celebration 4](/images/events/shivjayanti-2026/shiv-2026-1.webp)
+![Shivjayanti Celebration 1](/images/events/2026/february/shivjayanti-2026/shiv-2026-2.webp)
+![Shivjayanti Celebration 2](/images/events/2026/february/shivjayanti-2026/shiv-2026-4.webp)
+![Shivjayanti Celebration 3](/images/events/2026/february/shivjayanti-2026/shiv-2026-3.webp)
+![Shivjayanti Celebration 4](/images/events/2026/february/shivjayanti-2026/shiv-2026-1.webp)
 *Shivjayanti 2026 celebration moments in Krakow*
 

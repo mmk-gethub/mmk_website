@@ -2,7 +2,7 @@
 tags: post
 layout: post.njk
 title: "शिवरात्री, शून्य आणि परदेशातील आपलेपण"
-author: "अनुराधा गिरी"
+author: "Anuradha Giri"
 category: "Article"
 date: "2026-03-07"
 image: "/images/community_updates/2026/march/artical_1_mahashivratri/shivlingam.webp"

@@ -4,7 +4,7 @@ layout: post.njk
 title: "शिवरात्री, शून्य आणि परदेशातील आपलेपण"
 author: "Anuradha Giri"
 category: "Article"
-date: "2026-03-07"
+date: "2026-02-15"
 image: "/images/community_updates/2026/february/artical_1_mahashivratri/shivlingam.webp"
 excerpt: "पोलंडमध्ये साजरी केलेल्या साध्या, शांत आणि मनाला स्पर्शून जाणाऱ्या शिवरात्रीचा अनुभव."
 ---

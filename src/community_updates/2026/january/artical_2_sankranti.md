@@ -2,10 +2,10 @@
 tags: post
 layout: post.njk
 title: "Sankranti: हळदीकुंकू?"
-author: "अनुराधा गिरी"
+author: "Anuradha Giri"
 category: "Article"
-date: "2026-03-08"
-image: "/images/community_updates/2026/march/artical_2_sankranti/haladi_kunku.webp"
+date: "2026-01-24"
+image: "/images/community_updates/2026/january/artical_2_sankranti/haladi_kunku.webp"
 excerpt: "परदेशात राहूनही हळदीकुंकूच्या निमित्ताने जपलेली मातीची ओढ, मैत्री आणि मराठी संस्कृतीचा वारसा."
 ---
 

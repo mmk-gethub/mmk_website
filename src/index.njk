@@ -4,9 +4,6 @@ layout: base.njk
 
 <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="floating floating-1">🪔</div>
-        <div class="floating floating-2">🎭</div>
-        <div class="floating floating-3">🧧</div>
         <div class="hero-content">
             <h1>
                 Maharashtra Mandal Krakow
@@ -15,8 +12,8 @@ layout: base.njk
             <p>Celebrating and preserving the rich Marathi culture, traditions, and heritage in the heart of Poland.
                 Join us in our cultural journey.</p>
             <div class="hero-buttons">
-                <a href="#events" class="btn btn-primary">Upcoming Events</a>
-                <a href="#about" class="btn btn-secondary">Learn More</a>
+                <a href="/events/2026/march/gudi-padwa-2026/" class="btn btn-primary">Upcoming Event</a>
+                <a href="#about" class="btn btn-secondary">About Us</a>
             </div>
         </div>
     </section>
@@ -50,7 +47,7 @@ layout: base.njk
             <div class="about-card fade-in">
                 <i class="fas fa-calendar-alt"></i>
                 <h3>Regular Events</h3>
-                <p>Organizing monthly cultural gatherings, food festivals, dance workshops, and celebration of Indian
+                <p>Organizing monthly cultural gatherings, dance workshops, and celebration of Indian
                     festivals.</p>
             </div>
         </div>
@@ -66,48 +63,46 @@ layout: base.njk
             <div class="event-item fade-in">
                 <div class="event-card">
                     <span class="event-date">March 2026</span>
-                    <h3>Gudi Padwa Celebration</h3>
-                    <p>Welcome the new year with traditional Gudi Padwa festivities, including rangoli, traditional
-                        food, and cultural performances.</p>
+                    <h3>Gudhi Padwa</h3>
+                    <p>Step into the festive spirit of Gudhi Padwa where our community gathers to welcome new beginnings with vibrant traditions, cultural performances
+                    and the timeless warmth of Maharashtra.</p>
                     <div class="event-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Radha Govind Bhakti Yog Temple, Krakow
+                              <i class="fas fa-map-marker-alt"></i>
+                                    Krakow, Poland
+                     </div>
+                    <div class="event-action">
+                        <a href="/events/2026/march/gudi-padwa-2026/" class="event-card-overlay" aria-hidden="true"></a>
+                        <a href="/events/2026/march/gudi-padwa-2026/" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
             </div>
             <div class="event-item fade-in">
                 <div class="event-card">
-                    <span class="event-date">April 2026</span>
-                    <h3>Maharashtra Day Food Festival</h3>
-                    <p>Celebrate Maharashtra Day with an authentic food festival featuring traditional Marathi dishes,
-                        music, and dance.</p>
+                    <span class="event-date">Feb 2026</span>
+                    <h3>Shiv Jayanti</h3>
+                    <p>On Shiv Jayanti, our community gathers to celebrate the inspiring legacy of Chhatrapati Shivaji Maharaj through culture, stories and a shared sense of pride.</p>
                     <div class="event-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Krakow, Poland
+                              <i class="fas fa-map-marker-alt"></i>
+                                Krakow, Poland
+                    </div>
+                    <div class="event-action">
+                        <a href="/events/2026/february/shivjayanti-2026/" class="event-card-overlay" aria-hidden="true"></a>
+                        <a href="/events/2026/february/shivjayanti-2026/" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
             </div>
             <div class="event-item fade-in">
                 <div class="event-card">
-                    <span class="event-date">August-September 2026</span>
-                    <h3>Ganeshotsav 2026</h3>
-                    <p>Our biggest celebration of the year! 10 days of Ganpati Bappa's grandeur with visarjan, cultural
-                        programs, and community gatherings.</p>
-                    <div class="event-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Radha Govind Bhakti Yog Temple, Krakow
-                    </div>
-                </div>
-            </div>
-            <div class="event-item fade-in">
-                <div class="event-card">
-                    <span class="event-date">October-November 2026</span>
-                    <h3>Diwali Celebration</h3>
-                    <p>The festival of lights celebration with diya decorating, fireworks, rangoli competitions, and
-                        delicious festive food.</p>
-                    <div class="event-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        Krakow, Poland
+                    <span class="event-date">Jan 2026</span>
+                    <h3>Makar Sankranti</h3>
+                    <p>First celebration of the year! Celebrated Makar Sankranti with aranging Haldi-Kunku get together followed by games!</p>
+                     <div class="event-location">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Krakow, Poland
+                             </div>
+                    <div class="event-action">
+                        <a href="/events/2026/january/makar-sankranti-2026/" class="event-card-overlay" aria-hidden="true"></a>
+                        <a href="/events/2026/january/makar-sankranti-2026/" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
             </div>
@@ -129,44 +124,28 @@ layout: base.njk
         </div>
         <div id="photos" class="gallery-content active">
             <div class="gallery-grid">
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/background.jpeg" alt="Event Photo 1">
+                {% for image in collections.galleryImages %}
+                <div class="gallery-item {% if loop.index > 8 %}hidden-gallery-item{% endif %}" onclick="openLightbox(this)">
+                    <img src="{{ image.url }}" alt="{{ image.alt }}">
                     <i class="fas fa-expand"></i>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/logo.png" alt="Event Photo 2">
-                    <i class="fas fa-expand"></i>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/maharashtra_map.png" alt="Event Photo 3">
-                    <i class="fas fa-expand"></i>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/background.jpeg" alt="Event Photo 4">
-                    <i class="fas fa-expand"></i>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/logo.png" alt="Event Photo 5">
-                    <i class="fas fa-expand"></i>
-                </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
-                    <img src="images/background.jpeg" alt="Event Photo 6">
-                    <i class="fas fa-expand"></i>
-                </div>
+                {% else %}
+                <p>No recent photos available yet.</p>
+                {% endfor %}
             </div>
         </div>
         <div id="videos" class="gallery-content">
             <div class="video-grid">
                 <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video"
+                    <iframe src="https://www.youtube.com/embed/5A5ENV4tpJs" title="YouTube video"
                         allowfullscreen></iframe>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video"
+                    <iframe src="https://www.youtube.com/embed/LcpIouxAaYc" title="YouTube video"
                         allowfullscreen></iframe>
                 </div>
                 <div class="video-item">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video"
+                    <iframe src="https://www.youtube.com/embed/nwxu4S-BLck?start=170" title="YouTube video"
                         allowfullscreen></iframe>
                 </div>
             </div>
@@ -176,17 +155,20 @@ layout: base.njk
     <!-- Blog Section -->
     <section id="blog" class="blog">
         <div class="section-header">
-            <h2>Latest <span>Updates</span></h2>
-            <p>Stay informed about our latest events, celebrations, and community news.</p>
+            <h2>Community <span>Updates</span></h2>
+            <p>Stay connected with poems, stories, and creativity from the MMK family.</p>
         </div>
         <div class="blog-grid">
             
-        {% for post in collections.event | reverse %}
+        {% for post in collections.post | reverse %}
           {% if loop.index <= 3 %}
             <article class="blog-card fade-in">
                 <img src="{{ post.data.image | replace('../', '') }}" alt="{{ post.data.title }}" class="blog-image">
                 <div class="blog-content">
                     <span class="blog-date">{{ post.data.date | formatDate }}</span>
+                    {% if post.data.author %}
+                    <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.5rem; display: block;"><i class="fas fa-user-circle" style="color: var(--primary);"></i> {{ post.data.author }}</span>
+                    {% endif %}
                     <h3>{{ post.data.title }}</h3>
                     <p>{{ post.data.excerpt }}</p>
                     <a href="{{ post.url }}" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
@@ -197,7 +179,67 @@ layout: base.njk
 
         </div>
         <div class="view-all-events">
-            <a href="/events/" class="btn btn-secondary">View All Posts</a>
+            <a href="/community_updates/" class="btn btn-secondary">View All Posts</a>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="sponsors">
+        <div class="section-header">
+            <h2>Our <span>Sponsors & Supporters</span></h2>
+            <p>Partners who support our community initiatives and cultural events.</p>
+        </div>
+        <div class="sponsors-carousel">
+            <div class="sponsors-track">
+                <a href="https://indiabazaar.pl/" target="_blank" class="sponsor-card"><img src="images/sponsors/India_bazaar.webp" alt="India Bazaar"></a>
+                <a href="https://malayali.rocks/" target="_blank" class="sponsor-card"><img src="images/sponsors/malayali_3.webp" alt="Malayali 3"></a>
+                <a href="https://ib-polska.pl/centrum-wielokulturowe-w-krakowie/" target="_blank" class="sponsor-card"><img src="images/sponsors/centrum_wielokulturowe.webp" alt="Centrum Wielokulturowe"></a>
+                <a href="https://cosmo.edu.pl/schools/krakow/" target="_blank" class="sponsor-card"><img src="images/sponsors/cosmopoliton_school.webp" alt="Cosmopolitan School"></a>
+                <a href="https://ib-polska.pl/" target="_blank" class="sponsor-card"><img src="images/sponsors/foundation_ib_polska.webp" alt="Foundation IB Polska"></a>
+                <a href="https://lemonn.co.in/" target="_blank" class="sponsor-card"><img src="images/sponsors/lemonn_india.webp" alt="Lemonn India"></a>
+                <a href="https://www.littleindia.pl/lang/en" target="_blank" class="sponsor-card"><img src="images/sponsors/little_india.webp" alt="Little India"></a>
+                <a href="https://malayali.rocks/" target="_blank" class="sponsor-card"><img src="images/sponsors/malayali_2.webp" alt="Malayali 2"></a>
+                <a href="https://www.optionsellingmarathi.com/" target="_blank" class="sponsor-card"><img src="images/sponsors/marathi_option_selling.webp" alt="Marathi Option Selling"></a>
+                <a href="https://www.shubhmangaleurope.com/" target="_blank" class="sponsor-card"><img src="images/sponsors/shubhmangal_europe.webp" alt="Shubhmangal Europe"></a>
+                <a href="https://www.instagram.com/global_vaibhav/" target="_blank" class="sponsor-card"><img src="images/sponsors/global_vaibhav.webp" alt="Global Vaibhav"></a>
+                <!-- Duplicated for infinite scroll effect below -->
+                <a href="https://indiabazaar.pl/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/India_bazaar.webp" alt="India Bazaar"></a>
+                <a href="https://malayali.rocks/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/malayali_3.webp" alt="Malayali 3"></a>
+                <a href="https://ib-polska.pl/centrum-wielokulturowe-w-krakowie/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/centrum_wielokulturowe.webp" alt="Centrum Wielokulturowe"></a>
+                <a href="https://cosmo.edu.pl/schools/krakow/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/cosmopoliton_school.webp" alt="Cosmopolitan School"></a>
+                <a href="https://ib-polska.pl/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/foundation_ib_polska.webp" alt="Foundation IB Polska"></a>
+                <a href="https://lemonn.co.in/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/lemonn_india.webp" alt="Lemonn India"></a>
+                <a href="https://www.littleindia.pl/lang/en" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/little_india.webp" alt="Little India"></a>
+                <a href="https://malayali.rocks/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/malayali_2.webp" alt="Malayali 2"></a>
+                <a href="https://www.optionsellingmarathi.com/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/marathi_option_selling.webp" alt="Marathi Option Selling"></a>
+                <a href="https://www.shubhmangaleurope.com/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/shubhmangal_europe.webp" alt="Shubhmangal Europe"></a>
+                <a href="https://www.instagram.com/global_vaibhav/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/global_vaibhav.webp" alt="Global Vaibhav"></a>
+            </div>
+            <div class="sponsors-track-reverse">
+                <a href="https://malayali.rocks/" target="_blank" class="sponsor-card"><img src="images/sponsors/malayali_2.webp" alt="Malayali 2"></a>
+                <a href="https://www.optionsellingmarathi.com/" target="_blank" class="sponsor-card"><img src="images/sponsors/marathi_option_selling.webp" alt="Marathi Option Selling"></a>
+                <a href="https://www.shubhmangaleurope.com/" target="_blank" class="sponsor-card"><img src="images/sponsors/shubhmangal_europe.webp" alt="Shubhmangal Europe"></a>
+                <a href="https://indiabazaar.pl/" target="_blank" class="sponsor-card"><img src="images/sponsors/India_bazaar.webp" alt="India Bazaar"></a>
+                <a href="https://malayali.rocks/" target="_blank" class="sponsor-card"><img src="images/sponsors/malayali_3.webp" alt="Malayali 3"></a>
+                <a href="https://ib-polska.pl/centrum-wielokulturowe-w-krakowie/" target="_blank" class="sponsor-card"><img src="images/sponsors/centrum_wielokulturowe.webp" alt="Centrum Wielokulturowe"></a>
+                <a href="https://cosmo.edu.pl/schools/krakow/" target="_blank" class="sponsor-card"><img src="images/sponsors/cosmopoliton_school.webp" alt="Cosmopolitan School"></a>
+                <a href="https://ib-polska.pl/" target="_blank" class="sponsor-card"><img src="images/sponsors/foundation_ib_polska.webp" alt="Foundation IB Polska"></a>
+                <a href="https://lemonn.co.in/" target="_blank" class="sponsor-card"><img src="images/sponsors/lemonn_india.webp" alt="Lemonn India"></a>
+                <a href="https://www.littleindia.pl/lang/en" target="_blank" class="sponsor-card"><img src="images/sponsors/little_india.webp" alt="Little India"></a>
+                <a href="https://www.instagram.com/global_vaibhav/" target="_blank" class="sponsor-card"><img src="images/sponsors/global_vaibhav.webp" alt="Global Vaibhav"></a>
+                <!-- Duplicated for infinite scroll effect below -->
+                <a href="https://malayali.rocks/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/malayali_2.webp" alt="Malayali 2"></a>
+                <a href="https://www.optionsellingmarathi.com/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/marathi_option_selling.webp" alt="Marathi Option Selling"></a>
+                <a href="https://www.shubhmangaleurope.com/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/shubhmangal_europe.webp" alt="Shubhmangal Europe"></a>
+                <a href="https://indiabazaar.pl/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/India_bazaar.webp" alt="India Bazaar"></a>
+                <a href="https://malayali.rocks/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/malayali_3.webp" alt="Malayali 3"></a>
+                <a href="https://ib-polska.pl/centrum-wielokulturowe-w-krakowie/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/centrum_wielokulturowe.webp" alt="Centrum Wielokulturowe"></a>
+                <a href="https://cosmo.edu.pl/schools/krakow/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/cosmopoliton_school.webp" alt="Cosmopolitan School"></a>
+                <a href="https://ib-polska.pl/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/foundation_ib_polska.webp" alt="Foundation IB Polska"></a>
+                <a href="https://lemonn.co.in/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/lemonn_india.webp" alt="Lemonn India"></a>
+                <a href="https://www.littleindia.pl/lang/en" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/little_india.webp" alt="Little India"></a>
+                <a href="https://www.instagram.com/global_vaibhav/" target="_blank" class="sponsor-card" aria-hidden="true"><img src="images/sponsors/global_vaibhav.webp" alt="Global Vaibhav"></a>
+            </div>
         </div>
     </section>
 
@@ -214,7 +256,7 @@ layout: base.njk
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
                         <h4>Location</h4>
-                        <p>Radha Govind Bhakti Yog Temple<br>Krakow, Poland</p>
+                        <p>Krakow, Poland</p>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -228,20 +270,24 @@ layout: base.njk
                     <i class="fas fa-phone"></i>
                     <div>
                         <h4>Phone</h4>
-                        <p>+48 XXX XXX XXX</p>
+                        <p>+48 729 361 136</p>
                     </div>
                 </div>
                 <h4 style="margin-top: 2rem;">Follow Us</h4>
                 <div class="social-links">
-                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i
+                    <a href="https://www.facebook.com/profile.php?id=61587636773982" target="_blank" aria-label="Facebook"><i
                             class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i
+                    <a href="https://www.instagram.com/maharashtramandalkrakow?igsh=bDViODZlYzlmbDN2&utm_source=qr" target="_blank" aria-label="Instagram"><i
                             class="fab fa-instagram"></i></a>
                     <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i
                             class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <form class="contact-form" name="contact" method="POST" data-netlify="true">
+            <form class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="hidden" style="display:none;">
+                    <label>Don't fill this out: <input name="bot-field"></label>
+                </p>
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name" required>

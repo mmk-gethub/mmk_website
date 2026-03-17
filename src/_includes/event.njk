@@ -1,13 +1,61 @@
 ---
 layout: base.njk
 ---
-<section class="hero">
-    <p class="date">{{ date | formatDate }}</p>
-    <h1>{{ title }}</h1>
+<link rel="stylesheet" href="/css/event.css">
+<style>
+    .event-hero::before {
+        {% if image %}
+        background: url('{{ image }}') center/cover no-repeat;
+        {% else %}
+        background: url('/images/events/2024/november/diwali-2024/DSC03958.webp') center/cover no-repeat;
+        {% endif %}
+    }
+</style>
+
+<section class="event-hero">
+    <div class="event-header">
+        {% if category %}
+        <span class="event-category">{{ category }}</span>
+        {% endif %}
+        <h1 class="event-title">{{ title }}</h1>
+        <div class="event-meta">
+            <span><i class="far fa-calendar-alt"></i> {{ date | formatDate }}</span>
+            {% if location %}
+            <span><i class="fas fa-map-marker-alt"></i> {{ location }}</span>
+            {% endif %}
+        </div>
+    </div>
 </section>
 
-<div class="content">
-    <a href="/events/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Events</a>
+<div class="event-body">
+    <a href="/#events" class="back-link"><i class="fas fa-arrow-left"></i> Back to Events</a>
     
-    {{ content | safe }}
+    {% if excerpt %}
+    <div class="prose" style="font-size: 1.25rem; line-height: 1.6; margin-bottom: 2.5rem; color: var(--text-primary); border-left: 4px solid var(--primary); padding-left: 1.5rem; background: var(--secondary); padding: 1.5rem; border-radius: 0 12px 12px 0;">
+        {{ excerpt }}
+    </div>
+    {% endif %}
+
+    <div class="prose">
+        {{ content | safe }}
+    </div>
+
+    {% if sponsors and sponsors.length > 0 %}
+    <div class="event-sponsors">
+        <h3>Our Generous Sponsors</h3>
+        <div class="sponsors-grid">
+            {% for sponsor in sponsors %}
+            <div class="sponsor-item">
+                {% if sponsor.link %}
+                <a href="{{ sponsor.link }}" target="_blank" rel="noopener noreferrer">
+                    <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="sponsor-logo">
+                </a>
+                {% else %}
+                <img src="{{ sponsor.logo }}" alt="{{ sponsor.name }}" class="sponsor-logo">
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
 </div>

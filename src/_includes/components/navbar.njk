@@ -1,0 +1,53 @@
+{# Find the newest post across events and community updates #}
+{% set latestTimestamp = 0 %}
+{% set latestUrl = "" %}
+
+{% for post in collections.post %}
+    {% set postTs = post.date | timestamp %}
+    {% if postTs > latestTimestamp %}
+        {% set latestTimestamp = postTs %}
+        {% set latestUrl = post.url %}
+    {% endif %}
+{% endfor %}
+
+{% for post in collections.event %}
+    {% set postTs = post.date | timestamp %}
+    {% if postTs > latestTimestamp %}
+        {% set latestTimestamp = postTs %}
+        {% set latestUrl = post.url %}
+    {% endif %}
+{% endfor %}
+
+<div class="updates-banner" id="updatesBanner" data-latest-timestamp="{{ latestTimestamp }}" style="display: none;">
+    <div class="updates-banner-content">
+        <span class="updates-badge">New</span>
+        <a href="{{ latestUrl }}" class="updates-text">We have new updates! Check out our latest events and community posts.</a>
+    </div>
+    <button class="updates-close" onclick="closeUpdatesBanner()" aria-label="Close notification">&times;</button>
+</div>
+
+<nav class="navbar">
+    <a href="/" class="logo">
+        <img src="/images/global/logo.webp" alt="Maharashtra Mandal Krakow" class="logo-img">
+        <div class="logo-text">Maharashtra Mandal <span>Krakow</span></div>
+    </a>
+    <ul class="nav-links">
+        <li><a href="/#home" class="active">Home</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#events">Events</a></li>
+        <li><a href="/#gallery">Gallery</a></li>
+        <li><a href="/community_updates/">Community</a></li>
+        <li><a href="/committee/">Committee</a></li>
+        <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <div class="theme-toggle-thumb"></div>
+        <i class="far fa-sun"></i>
+        <i class="far fa-moon"></i>
+    </button>
+</nav>

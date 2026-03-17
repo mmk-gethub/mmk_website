@@ -1,0 +1,169 @@
+---
+layout: base.njk
+---
+<link rel="stylesheet" href="/css/event.css">
+<style>
+    .post-hero {
+        min-height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: var(--background);
+        overflow: hidden;
+        padding-top: 80px;
+    }
+
+    .post-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        {% if image %}
+        background: url('{{ image }}') center/cover no-repeat;
+        {% else %}
+        background: url('/images/events/2024/november/diwali-2024/DSC03958.webp') center/cover no-repeat;
+        {% endif %}
+        filter: blur(4px) brightness(0.6);
+        transform: scale(1.05);
+        z-index: 0;
+    }
+
+    .post-hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(14, 22, 40, 0.7) 0%, var(--background) 100%);
+        z-index: 1;
+    }
+
+    [data-theme="light"] .post-hero::after {
+        background: linear-gradient(to bottom, rgba(30, 30, 30, 0.5) 0%, var(--background) 100%);
+    }
+
+    .post-header {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 900px;
+        padding: 0 5%;
+        margin-top: 2rem;
+        animation: fadeInUp 1s ease;
+    }
+
+    .post-category {
+        display: inline-block;
+        background: var(--accent);
+        color: var(--secondary);
+        padding: 0.4rem 1.2rem;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .post-title {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.8);
+    }
+
+    [data-theme="light"] .post-title {
+        color: #ffffff;
+    }
+
+    .post-meta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        color: #e2e8f0;
+        font-size: 1.1rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .post-author {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-weight: 600;
+    }
+
+    .post-author i {
+        color: var(--primary);
+        font-size: 1.2rem;
+    }
+
+    .post-meta-item i {
+        color: var(--accent);
+        margin-right: 0.5rem;
+    }
+
+    .post-body {
+        max-width: 800px;
+        margin: -4rem auto 4rem;
+        background: var(--surface);
+        padding: 4rem;
+        border-radius: 20px;
+        position: relative;
+        z-index: 10;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        animation: fadeInUp 1.2s ease;
+    }
+
+    @media (max-width: 768px) {
+        .post-body {
+            margin: -2rem 1rem 3rem;
+            padding: 2.5rem 1.5rem;
+        }
+        .post-meta {
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+</style>
+
+<section class="post-hero">
+    <div class="post-header">
+        {% if category %}
+        <span class="post-category">{{ category }}</span>
+        {% endif %}
+        <h1 class="post-title">{{ title }}</h1>
+        <div class="post-meta">
+            {% if author %}
+            <div class="post-author">
+                <i class="fas fa-user-circle"></i>
+                By {{ author }}
+            </div>
+            {% endif %}
+            <div class="post-meta-item">
+                <i class="far fa-calendar-alt"></i> {{ date | formatDate }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="post-body">
+    <a href="/community_updates/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Community Updates</a>
+    
+    {% if excerpt %}
+    <div class="prose" style="font-size: 1.3rem; font-style: italic; line-height: 1.6; margin-bottom: 3rem; color: var(--text-primary); text-align: center; border-bottom: 1px solid var(--surface-light); padding-bottom: 2rem;">
+        "{{ excerpt }}"
+    </div>
+    {% endif %}
+
+    <div class="prose">
+        {{ content | safe }}
+    </div>
+</div>

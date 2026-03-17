@@ -5,7 +5,7 @@ title: "एक छोटी मुलगी… आणि महाराजा�
 author: "Dipika Salgude"
 category: "Article"
 date: "2026-02-22"
-image: "/images/community_updates/2026/march/artical_4_shivjayanti/shivaji_maharaj.webp"
+image: "/images/community_updates/2026/february/artical_4_shivjayanti/shivaji_maharaj.webp"
 excerpt: "शिवनेरीच्या धड्यातून सुरू झालेलं महाराजांशी नातं, परदेशातही अभिमानाने जपलेला वारसा."
 ---
 

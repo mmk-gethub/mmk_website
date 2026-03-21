@@ -1565,7 +1565,7 @@
         /* Toast Notification */
         .toast {
             position: fixed;
-            bottom: 2rem;
+            bottom: 6rem;
             right: 2rem;
             background: var(--surface);
             color: var(--text-primary);

@@ -1,19 +1,59 @@
-name: Notify Subscribers of Updates
+name: Notify Subscribers of New Content
 
 on:
   push:
     branches:
-      - prerelease_changes
       - main
     paths:
-      - 'src/events/**/*.md'
-      - 'src/community_updates/**/*.md'
+      - 'src/events/**'
+      - 'src/community_updates/**'
 
 jobs:
   notify_onesignal:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect added files and determine update type
+        id: detect
+        run: |
+          # Get files that were ADDED (status A) in this push
+          ADDED_FILES=$(git diff --name-status HEAD~1 HEAD | grep '^A' | awk '{print $2}')
+          echo "Added files: $ADDED_FILES"
+
+          HAS_EVENT=false
+          HAS_COMMUNITY=false
+
+          while IFS= read -r file; do
+            if echo "$file" | grep -q '^src/events/'; then
+              HAS_EVENT=true
+            fi
+            if echo "$file" | grep -q '^src/community_updates/'; then
+              HAS_COMMUNITY=true
+            fi
+          done <<< "$ADDED_FILES"
+
+          if [ "$HAS_EVENT" = "true" ] && [ "$HAS_COMMUNITY" = "true" ]; then
+            echo "type=both" >> $GITHUB_OUTPUT
+            echo "heading=New Events & Community Updates!" >> $GITHUB_OUTPUT
+            echo "message=New events and community updates have been posted on Maharashtra Mandal Krakow! Tap to check them out." >> $GITHUB_OUTPUT
+          elif [ "$HAS_EVENT" = "true" ]; then
+            echo "type=event" >> $GITHUB_OUTPUT
+            echo "heading=New Event from MMKrakow!" >> $GITHUB_OUTPUT
+            echo "message=A new event has been added on Maharashtra Mandal Krakow! Tap to see the details." >> $GITHUB_OUTPUT
+          elif [ "$HAS_COMMUNITY" = "true" ]; then
+            echo "type=community" >> $GITHUB_OUTPUT
+            echo "heading=New Community Update from MMKrakow!" >> $GITHUB_OUTPUT
+            echo "message=A new community update has been posted on Maharashtra Mandal Krakow! Tap to read more." >> $GITHUB_OUTPUT
+          else
+            echo "type=none" >> $GITHUB_OUTPUT
+          fi
+
       - name: Send OneSignal Push Notification
+        if: steps.detect.outputs.type != 'none' && steps.detect.outputs.type != ''
         run: |
           curl --request POST \
             --url https://onesignal.com/api/v1/notifications \
@@ -22,6 +62,7 @@ jobs:
             --data '{
               "app_id": "${{ secrets.ONESIGNAL_APP_ID }}",
               "included_segments": ["Subscribed Users"],
-              "contents": {"en": "A new community update or event has been posted on Maharashtra Mandal Krakow! Tap to view."},
-              "headings": {"en": "New Update from MMKrakow!"}
+              "headings": {"en": "${{ steps.detect.outputs.heading }}"},
+              "contents": {"en": "${{ steps.detect.outputs.message }}"},
+              "url": "https://mmkrakow.netlify.app"
             }'

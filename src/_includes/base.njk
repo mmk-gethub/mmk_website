@@ -30,14 +30,12 @@
     <script>
       window.OneSignalDeferred = window.OneSignalDeferred || [];
       OneSignalDeferred.push(async function(OneSignal) {
+        console.log("OneSignal: Initializing...");
         await OneSignal.init({
           appId: "78910ea2-bbd3-4ab8-8ba7-102059f46c00",
           allowLocalhostAsSecureOrigin: true,
-          notifyButton: {
-            enable: true,
-            position: 'bottom-left',
-          },
         });
+        console.log("OneSignal: Initialized.");
       });
     </script>
 </head>

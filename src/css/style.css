@@ -1000,6 +1000,16 @@
             font-size: 0.9rem;
         }
 
+        .contact-item a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
         .social-links {
             display: flex;
             gap: 1rem;
@@ -1463,7 +1473,7 @@
 
             .event-card::before,
             .event-item:nth-child(even) .event-card::before {
-                left: 12px;
+                left: -38px;
                 right: auto;
             }
 
@@ -1550,6 +1560,35 @@
             background: var(--gradient);
             width: 0%;
             transition: width 0.1s ease;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 6rem;
+            right: 2rem;
+            background: var(--surface);
+            color: var(--text-primary);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 9999;
+            transform: translateY(150%);
+            opacity: 0;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            border-left: 4px solid var(--primary);
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .toast.error {
+            border-left-color: #ff3333;
         }
 
         /* Go to Top Button */

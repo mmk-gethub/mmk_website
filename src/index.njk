@@ -267,14 +267,14 @@ layout: base.njk
                     <i class="fas fa-envelope"></i>
                     <div>
                         <h4>Email</h4>
-                        <p>maharashtramandalkrakow@gmail.com</p>
+                        <p><a href="mailto:maharashtramandalkrakow@gmail.com">maharashtramandalkrakow@gmail.com</a></p>
                     </div>
                 </div>
                 <div class="contact-item">
                     <i class="fas fa-phone"></i>
                     <div>
                         <h4>Phone</h4>
-                        <p>+48 729 361 136</p>
+                        <p><a href="tel:+48729361136">+48 729 361 136</a></p>
                     </div>
                 </div>
                 <h4 style="margin-top: 2rem;">Follow Us</h4>
@@ -317,5 +317,75 @@ layout: base.njk
             </form>
         </div>
     </section>
+
+    <!-- Toast Notification -->
+    <div id="form-toast" class="toast">
+        <i class="fas fa-check-circle" style="color: var(--primary);"></i>
+        <span id="toast-message">Your message has been sent successfully!</span>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const contactForm = document.querySelector('.contact-form');
+        const toast = document.getElementById('form-toast');
+        
+        if (!toast) return;
+
+        const toastIcon = toast.querySelector('i');
+        const toastMessage = document.getElementById('toast-message');
+
+        function showToast(message, isError = false) {
+            toastMessage.textContent = message;
+            if (isError) {
+                toast.classList.add('error');
+                toastIcon.className = 'fas fa-exclamation-circle';
+                toastIcon.style.color = '#ff3333';
+            } else {
+                toast.classList.remove('error');
+                toastIcon.className = 'fas fa-check-circle';
+                toastIcon.style.color = 'var(--primary)';
+            }
+            
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 5000);
+        }
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+
+                const formData = new FormData(this);
+                
+                fetch('/', {
+                    method: 'POST',
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString()
+                })
+                .then(response => {
+                    if (response.ok) {
+                        showToast('Thank you! Your message has been sent successfully.');
+                        contactForm.reset();
+                    } else {
+                        throw new Error('Network response was not ok.');
+                    }
+                })
+                .catch((error) => {
+                    showToast('Oops! There was a problem submitting your form.', true);
+                })
+                .finally(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+            });
+        }
+    });
+    </script>
 
     

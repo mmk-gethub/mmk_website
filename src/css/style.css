@@ -727,12 +727,33 @@
         }
 
         .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
             gap: 1.5rem;
+            padding-bottom: 1rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) var(--surface-light);
+        }
+
+        .video-grid::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .video-grid::-webkit-scrollbar-track {
+            background: var(--surface-light);
+            border-radius: 4px;
+        }
+
+        .video-grid::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
         }
 
         .video-item {
+            flex: 0 0 85%;
+            max-width: 400px;
+            scroll-snap-align: start;
             aspect-ratio: 16/9;
             border-radius: 12px;
             overflow: hidden;
@@ -1059,7 +1080,7 @@
 
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
             gap: 2rem;
             margin-bottom: 3rem;
         }
@@ -1074,13 +1095,43 @@
         }
 
         .footer h4,
-        .footer-links-section h4 {
+        .footer-links-section h4,
+        .footer-sponsors-section h4 {
             font-family: 'Playfair Display', serif;
             font-size: 1.25rem;
             margin-bottom: 1.5rem;
             color: var(--text-primary);
             text-align: left;
             width: 100%;
+        }
+
+        .footer-sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .footer-sponsor-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--surface-light);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .footer-sponsor-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--primary);
+        }
+
+        .footer-sponsor-card img {
+            width: 100%;
+            height: auto;
+            max-height: 40px;
+            object-fit: contain;
         }
 
 
@@ -1466,7 +1517,8 @@
             }
 
             .footer h4,
-            .footer-links-section h4 {
+            .footer-links-section h4,
+            .footer-sponsors-section h4 {
                 text-align: center;
                 margin-bottom: 1rem;
             }

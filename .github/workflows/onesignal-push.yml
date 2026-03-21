@@ -64,5 +64,5 @@ jobs:
               "included_segments": ["Subscribed Users"],
               "headings": {"en": "${{ steps.detect.outputs.heading }}"},
               "contents": {"en": "${{ steps.detect.outputs.message }}"},
-              "url": "https://mmkrakow.netlify.app"
+                            "url": "https://mmkrakow.com"
             }'

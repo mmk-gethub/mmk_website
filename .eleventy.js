@@ -5,6 +5,10 @@ module.exports = function (eleventyConfig) {
     // Pass through the CSS folder
     eleventyConfig.addPassthroughCopy("src/css");
 
+    // Pass through PWA files
+    eleventyConfig.addPassthroughCopy("src/manifest.json");
+    eleventyConfig.addPassthroughCopy("src/sw.js");
+
     // Format date filter for Nunjucks
     eleventyConfig.addFilter("formatDate", function (dateObj) {
         if (!dateObj) return "";

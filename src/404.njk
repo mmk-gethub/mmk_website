@@ -1,0 +1,41 @@
+---
+layout: base.njk
+permalink: 404.html
+title: Page Not Found
+---
+
+<style>
+.error-page {
+    text-align: center;
+    padding: 120px 5%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.error-page h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+    color: var(--primary);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+.error-page h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+.error-page p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+</style>
+
+<div class="error-page fade-in">
+    <h1>404</h1>
+    <h2>Oops! Content Coming Soon</h2>
+    <p>We're sorry, but the page you are looking for doesn't exist or is currently under construction. Please check back later!</p>
+    <a href="/" class="btn btn-primary">Return to Homepage</a>
+</div>

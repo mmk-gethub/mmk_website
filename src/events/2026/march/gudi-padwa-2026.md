@@ -4,54 +4,31 @@ layout: event.njk
 title: "Gudi Padwa 2026 - New Year Celebrations"
 date: "2026-03-30"
 category: "Festival"
-image: "/images/events/2026/march/gudi-padwa-2026/gudi_padwa_placeholder.webp"
-excerpt: "Welcoming the Marathi new year with traditional Gudi Padwa celebrations featuring authentic Marathi cuisine and cultural performances."
+image: "/images/events/2026/march/gudi-padwa-2026/DSC04507.webp"
+excerpt: "The Marathi community in Krakow came together to welcome the new year with traditional Gudi Padwa celebrations, authentic cuisine, and cultural performances."
 ---
 
 # Gudi Padwa (गुढीपाडवा) 2026 - Marathi New Year Celebrations
 
-Maharashtra Mandal Krakow celebrates Gudi Padwa, the Marathi New Year, with traditional zeal and enthusiasm. The festival marks the beginning of the spring harvest season and is celebrated with special foods, decorations, rituals, and a vibrant cultural program.
+Maharashtra Mandal Krakow celebrated Gudi Padwa, the Marathi New Year, with traditional zeal and enthusiasm on March 30, 2026. The event brought together the community to mark the beginning of the spring season with rituals, cultural programs, and a festive feast.
+
+## Celebration Highlights
+
+The celebration was a day-long event filled with cultural richness and community bonding:
+
+- **Traditional Rituals:** The day began with the traditional hoisting of the Gudi and puja, symbolising victory and prosperity.
+- **Cultural Performances:** The program featured a variety of performances, including vocal songs by Ojasvi, Riddhim, Ishwari, Rudransh, and Kaki.
+- **Community Activities:** Children performed a dance and a Bal-Natya (theatrical performance), while the Natyalaya group and MMK girls showcased vibrant group dances.
+- **Special Moments:** The event marked the official launch of the MMK website and included a cooking competition that showcased the culinary talents of our community.
+- **Traditional Feast:** Participants enjoyed a traditional Maharashtrian lunch, featuring delicacies like Shrikhand-Puri and Puran Poli.
 
 ---
 
-## 🌅 Morning Session
+## Photo Gallery
 
-| # | Program | Details |
-|---|---------|---------|
-| 1 | **Welcome** | Opening & introduction |
-| 2 | **Gudhi Puja** | Traditional Gudhi hoisting & puja |
-| 3 | **Rashtrageet** | National Anthem |
-| 4 | **Atharvashirsha** | Shri Ganapati Atharvashirsha recitation |
-| 5 | **Song — Ojasvi & Riddhim** | Vocal performance |
-| 6 | **Song — Ishwari** | Vocal performance |
-| 7 | **MMK Team Introduction** | Meet the Maharashtra Mandal Krakow team |
-| 8 | **Website Launch** | Official MMK website launch |
-| 9 | **Song — Rudransh** | Vocal performance |
-| 10 | **Song — Kaki** | Vocal performance |
-| 11 | **Kids Dance** | Dance performance by children |
-| 12 | **Folk Akhyan** | Traditional folk narrative |
-| 13 | **Cooking Competition** | Live cooking contest |
-| 14 | **Cosmo School Presentation** | Guest presentation |
-
----
-
-## 🍽️ Lunch Break — 12:30 PM to 2:00 PM
-
----
-
-## 🌇 Afternoon Session
-
-| # | Program | Details |
-|---|---------|---------|
-| 1 | **Ice-Breaker Game** | Fun activity to kick off the afternoon |
-| 2 | **Bal-Natya** | Children's theatrical performance |
-| 3 | **Natyalaya Group Dance** | Two dance performances |
-| 4 | **MMK Girls Dance** | Group dance performance |
-| 5 | **Natyalaya Group Dance** | Remaining performances |
-| 6 | **Song — Trupti** | Vocal performance |
-| 7 | **Poster Making** | Creative activity for families |
-| 8 | **Special Segment — Mahesh** | Guest segment *(10 min)* |
-| 9 | **Prize Distribution & Vote of Thanks** | Awards & closing remarks |
+![Gudi Padwa Celebration 1](/images/events/2026/march/gudi-padwa-2026/DSC04507.webp)
+![Gudi Padwa Celebration 2](/images/events/2026/march/gudi-padwa-2026/DSC04514.webp)
+*Gudi Padwa community celebration in Krakow*
 
 ---
 
@@ -76,12 +53,6 @@ According to tradition, Gudi Padwa commemorates several auspicious events:
 - **Neem & Jaggery** — A paste of neem leaves and jaggery (gul) is eaten to signify the sweet and bitter experiences of life.
 - **Traditional Feast** — Families prepare Shrikhand-Puri, Puran Poli, Aamras, and other Maharashtrian delicacies.
 - **Rangoli & Toran** — Homes are decorated with colourful rangolis and fresh mango-leaf torans at the entrance.
-- **New Beginnings** — It is considered an auspicious day to start new ventures, buy property, or begin important endeavours.
-
-## Photo Gallery
-
-![Gudi Padwa Celebration](/images/events/2026/march/gudi-padwa-2026/gudi_padwa_placeholder.webp)
-*The decorated Gudi*
 
 ## Looking Forward
 
